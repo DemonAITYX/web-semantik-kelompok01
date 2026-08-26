@@ -1,4 +1,4 @@
-# 3. Fakta menjadi triple
+## 3. Fakta menjadi triple
 
 1. Universitas Sumatera Utara → instanceOf → public university
 2. Universitas Sumatera Utara → inception → 1952
