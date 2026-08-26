@@ -28,8 +28,59 @@
 
 
 ## 3. Eksplorasi Schema.org
-....
 
+Tipe yang digunakan: [`CollegeOrUniversity`](https://schema.org/CollegeOrUniversity)
+(schema.org tidak memiliki tipe bernama `University`; perguruan tinggi diwakili oleh
+`CollegeOrUniversity`, turunan dari `EducationalOrganization`).
+
+| Property | Fungsi | Contoh Nilai |
+|---|---|---|
+| `name` | Nama resmi entitas. Label utama yang ditampilkan mesin pencari. | `"Universitas Nusantara Digital"` |
+| `alternateName` | Nama alias atau singkatan, agar pencarian dengan singkatan tetap mengenali entitas yang sama. | `"UND"` |
+| `url` | Alamat situs web resmi entitas, sering dipakai sebagai identitas kanonik di web. | `"https://www.und.ac.id"` |
+| `address` | Alamat fisik kampus. Bertipe `PostalAddress`, sehingga nilainya berupa objek bersarang, bukan teks biasa. | `{ "@type": "PostalAddress", "streetAddress": "Jl. Merdeka No. 45", "addressLocality": "Bandung", "postalCode": "40115", "addressCountry": "ID" }` |
+| `foundingDate` | Tanggal berdirinya organisasi. Bertipe `Date`, wajib format ISO 8601. | `"1985-09-01"` |
+| `telephone` | Nomor telepon resmi yang dapat dihubungi, sebaiknya format internasional. | `"+62-22-1234567"` |
+| `logo` | Lambang resmi institusi, dipakai mesin pencari untuk menampilkan panel informasi. | `"https://www.und.ac.id/assets/logo.png"` |
+| `sameAs` | Menautkan entitas ke halaman lain yang merujuk entitas yang sama (Wikipedia, Wikidata, akun resmi). Kunci penggabungan data antar sumber. | `"https://www.wikidata.org/wiki/Q123456"` |
+| `department` | Unit di dalam organisasi, misalnya fakultas. Nilainya berupa entitas `Organization`, bukan teks. | `{ "@type": "CollegeOrUniversity", "name": "Fakultas Ilmu Komputer" }` |
+| `alumni` | Orang yang merupakan lulusan institusi. Punya relasi kebalikan `alumniOf` pada tipe `Person`. | `{ "@type": "Person", "name": "Siti Rahmawati" }` |
+
+Contoh penerapan dalam JSON-LD:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "CollegeOrUniversity",
+  "@id": "https://www.und.ac.id/#organization",
+  "name": "Universitas Nusantara Digital",
+  "alternateName": "UND",
+  "url": "https://www.und.ac.id",
+  "logo": "https://www.und.ac.id/assets/logo.png",
+  "foundingDate": "1985-09-01",
+  "telephone": "+62-22-1234567",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Merdeka No. 45",
+    "addressLocality": "Bandung",
+    "addressRegion": "Jawa Barat",
+    "postalCode": "40115",
+    "addressCountry": "ID"
+  },
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q123456",
+    "https://id.wikipedia.org/wiki/Universitas_Nusantara_Digital"
+  ],
+  "department": {
+    "@type": "CollegeOrUniversity",
+    "name": "Fakultas Ilmu Komputer"
+  },
+  "alumni": {
+    "@type": "Person",
+    "name": "Siti Rahmawati"
+  }
+}
+```
 
 ## 4. Pertanyaan Evaluasi
 
