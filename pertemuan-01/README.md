@@ -27,6 +27,9 @@
 | University of North Sumatra → country → Indonesia | Relasi | Menunjukkan negara USU |
 
 
+## 3. Eksplorasi Schema.org
+....
+
 
 ## 4. Pertanyaan Evaluasi
 
