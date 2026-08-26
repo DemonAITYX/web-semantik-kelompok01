@@ -31,9 +31,9 @@
 ## 4. Pertanyaan Evaluasi
 
 ### 1. Apa perbedaan utama antara web tradisional dan Web Semantik?
-*Web tradisional* dirancang terutama untuk dibaca dan dipahami oleh manusia (*human-readable*), di mana dokumen atau halaman web dihubungkan melalui *hyperlink* (HTML) tanpa ada makna terstruktur yang dapat diolah otomatis oleh komputer. 
+**Web tradisional** dirancang terutama untuk dibaca dan dipahami oleh manusia (*human-readable*), di mana dokumen atau halaman web dihubungkan melalui *hyperlink* (HTML) tanpa ada makna terstruktur yang dapat diolah otomatis oleh komputer. 
 
-Sebaliknya, *Web Semantik* dirancang agar data dan informasi dapat dipahami serta diolah langsung oleh mesin/komputer (*machine-readable*). Data pada Web Semantik dihubungkan berdasarkan makna dan relasinya menggunakan standar seperti RDF dan URI/IRI.
+Sebaliknya, **Web Semantik** dirancang agar data dan informasi dapat dipahami serta diolah langsung oleh mesin/komputer (*machine-readable*). Data pada Web Semantik dihubungkan berdasarkan makna dan relasinya menggunakan standar seperti RDF dan URI/IRI.
 
 ### 2. Mengapa suatu entitas membutuhkan identifier unik?
 Suatu entitas membutuhkan *identifier* unik (seperti URI atau IRI) untuk mencegah ambiguitas atau kekeliruan identitas data di internet. Dengan *identifier* unik, sistem dapat memastikan bahwa dua data merujuk pada objek/konsep nyata yang sama persis secara global, meskipun memiliki nama yang mirip atau digunakan oleh sistem yang berbeda-beda.
