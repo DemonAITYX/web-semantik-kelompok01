@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profil mahasiswa Web Semantik-->
+
+<profil nim="251402134">
+    <nama>Nabil Akbar Soufyan</nama>
+    <angkatan>2025</angkatan>
+    <programStudi>Teknologi Informasi</programStudi>
+
+    <hobi>3D Editing</hobi>
+    <hobi>Bike Riding</hobi>
+
+    <deskripsi>
+        Saya adalah mahasiswa Teknologi Informasi Universitas Sumatera Utara yang memiliki ketertarikan di bidang teknologi, khususnya pemrograman dan pengembangan web. 
+        Saya senang mempelajari hal-hal baru, mengembangkan berbagai proyek, serta terus meningkatkan kemampuan melaluipengalaman dan pembelajaran mandiri.
+    </deskripsi>
+</profil>
