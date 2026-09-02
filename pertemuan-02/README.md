@@ -6,18 +6,6 @@
 | 2 | `<angkatan>2024` | Elemen tidak memiliki tag penutup (*missing closing tag*). Setiap elemen XML wajib ditutup. | Tambahkan tag penutup di akhir nilai menjadi: `<angkatan>2024</angkatan>` |
 | 3 | `<deskripsi>Saya suka AI & Web Semantik</deskripsi>` | Terdapat karakter khusus `&` yang dilarang ditulis langsung dalam XML (harus di-*escape*). | Ganti karakter `&` dengan entitas XML yang valid, yaitu `&amp;` |
 
-### Kode XML Setelah Diperbaiki:
-```xml
-<mahasiswa>
-    <nama>Budi Santoso</nama>
-    <angkatan>2024</angkatan>
-    <hobi>Programming</hobi>
-    <hobi>Membaca</hobi>
-    <deskripsi>Saya suka AI &amp; Web Semantik</deskripsi>
-</mahasiswa>
-
-
-
 
 
 ## 5. Pertanyaan Evaluasi
