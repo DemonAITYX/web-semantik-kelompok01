@@ -1,3 +1,6 @@
+## 1. Profil XML
+XML yang saya buat adalah sebuah dokumen dengan elemen root `<profil>` yang berisi identitas mahasiswa, hobi, dan deskripsi singkat diri.
+
 ## 2. Analisis Kesalahan XML
 
 | No | Bagian yang Salah | Alasan | Perbaikan |
