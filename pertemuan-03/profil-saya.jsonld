@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://usu.ac.id/mhs/251402037",
+  "name": "Albariqi Deanda Tarigan",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Sumatera Utara"
+  },
+  "knowsAbout": [
+    "Pemrograman Web",
+    "Pemrograman Berorientasi Objek"
+  ]
+}
