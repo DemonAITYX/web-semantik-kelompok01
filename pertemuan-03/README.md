@@ -18,6 +18,14 @@
 
 
 ## 2. Pemeriksaan schema.org
-1. Alasan memilih tipe paling spesifik: Agar mesin pencari memahami konteks data secara presisi, sehingga meningkatkan peluang munculnya hasil pencarian yang lebih detail dan relevan (*rich snippets*).
-2. Nama properti dan bahasa nilai: Nama properti menggunakan standar global schema.org agar dimengerti mesin secara universal, sementara nilainya menggunakan bahasa Indonesia karena berisi data faktual yang disesuaikan dengan target atau konteks lokal.
-3. Manfaat array pada `knowsAbout`: Memungkinkan penulisan beberapa topik keahlian sekaligus secara ringkas dan efisien di dalam satu properti, sehingga menghindari pengulangan penulisan kode.
+1. Alasan memilih tipe paling spesifik:
+  
+   Agar mesin pencari memahami konteks data secara presisi, sehingga meningkatkan peluang munculnya hasil pencarian yang lebih detail dan relevan (*rich snippets*).
+
+2. Nama properti dan bahasa nilai: 
+ 
+   Nama properti menggunakan standar global schema.org agar dimengerti mesin secara universal, sementara nilainya menggunakan bahasa Indonesia karena berisi data faktual yang disesuaikan dengan target atau konteks lokal.
+
+3. Manfaat array pada `knowsAbout`: 
+   
+   Memungkinkan penulisan beberapa topik keahlian sekaligus secara ringkas dan efisien di dalam satu properti, sehingga menghindari pengulangan penulisan kode.
