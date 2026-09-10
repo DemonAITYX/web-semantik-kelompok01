@@ -31,14 +31,34 @@
    Memungkinkan penulisan beberapa topik keahlian sekaligus secara ringkas dan efisien di dalam satu properti, sehingga menghindari pengulangan penulisan kode.
 
 
-## 3. Perbaikan Lima Kesalahan
-| No. | Bagian Salah | Alasan | Perbaikan |
-|---|---|---|---|
-| 1 | ... | ... | ... |
-| 2 | ... | ... | ... |
-| 3 | ... | ... | ... |
-| 4 | ... | ... | ... |
-| 5 | ... | ... | ... |
+# 3. Perbaikan 5 Kesalahan (Pertemuan 03)
+
+Berikut adalah penjelasan mengenai lima kesalahan sintaks dan skema yang ditemukan pada file JSON-LD awal beserta perbaikannya:
+
+1. **Perbaikan Tipe (`@type`)**
+   - **Awal:** `"person"`
+   - **Perbaikan:** `"Person"`
+   - **Penjelasan:** Schema.org menerapkan aturan *case-sensitivity* di mana nama `@type` harus diawali dengan huruf kapital.
+
+2. **Perbaikan Tanda Kutip**
+   - **Awal:** `'name'`
+   - **Perbaikan:** `"name"`
+   - **Penjelasan:** Spesifikasi sintaks JSON menetapkan bahwa seluruh *key* dan *string value* wajib dibungkus dengan tanda kutip ganda (`"`).
+
+3. **Perbaikan Format Tanggal (`birthDate`)**
+   - **Awal:** `"12 September 2004"`
+   - **Perbaikan:** `"2004-09-12"`
+   - **Penjelasan:** Properti `birthDate` memerlukan format standar ISO 8601 (`YYYY-MM-DD`) agar dapat dibaca oleh *search engine* dan mesin pemroses data secara konsisten.
+
+4. **Perbaikan Properti Kustom (`nomorInduk`)**
+   - **Awal:** `"nomorInduk"`
+   - **Perbaikan:** `"identifier"`
+   - **Penjelasan:** `nomorInduk` bukan merupakan kosakata resmi pada vokabulari `Person` di Schema.org. Properti standar yang digunakan untuk menyimpan nomor identitas unik adalah `identifier`.
+
+5. **Penghapusan Koma Menggantung (*Trailing Comma*)**
+   - **Awal:** `"nomorInduk": "221401001",`
+   - **Perbaikan:** `"identifier": "221401001"` (tanpa koma di akhir)
+   - **Penjelasan:** Struktur JSON yang valid melarang penggunaan koma setelah properti terakhir dalam sebuah *object*.
 
 ## 4. Triple dari JSON-LD Playground
 Tuliskan satu baris N-Quads yang terbentuk:
