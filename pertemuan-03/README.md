@@ -31,7 +31,7 @@
    Memungkinkan penulisan beberapa topik keahlian sekaligus secara ringkas dan efisien di dalam satu properti, sehingga menghindari pengulangan penulisan kode.
 
 
-# 3. Perbaikan 5 Kesalahan (Pertemuan 03)
+## 3. Perbaikan 5 Kesalahan (Pertemuan 03)
 
 Berikut adalah penjelasan mengenai lima kesalahan sintaks dan skema yang ditemukan pada file JSON-LD awal beserta perbaikannya:
 
