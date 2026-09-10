@@ -29,3 +29,35 @@
 3. Manfaat array pada `knowsAbout`: 
    
    Memungkinkan penulisan beberapa topik keahlian sekaligus secara ringkas dan efisien di dalam satu properti, sehingga menghindari pengulangan penulisan kode.
+
+
+## 3. Perbaikan Lima Kesalahan
+| No. | Bagian Salah | Alasan | Perbaikan |
+|---|---|---|---|
+| 1 | ... | ... | ... |
+| 2 | ... | ... | ... |
+| 3 | ... | ... | ... |
+| 4 | ... | ... | ... |
+| 5 | ... | ... | ... |
+
+## 4. Triple dari JSON-LD Playground
+Tuliskan satu baris N-Quads yang terbentuk:
+
+```text
+ISI_TRIPLE
+```
+
+## 5. Hasil Validasi
+- Schema Markup Validator: ...
+- Rich Results Test: ...
+- JSON-LD Playground: ...
+
+## 6. Refleksi
+1. Mengapa `@context` disebut jembatan menuju makna?
+2. Apa perbedaan fungsi Schema Markup Validator dan Rich Results Test?
+3. Mengapa isi JSON-LD harus sama dengan konten yang terlihat pada halaman?
+
+## Bukti
+![Schema Markup Validator](screenshots/profil-schema-validator.png)
+![JSON-LD Playground](screenshots/profil-playground.png)
+![Rich Results Test](screenshots/seminar-rich-results.png)
