@@ -16,7 +16,7 @@
 | --- | --- | --- |
 | dcterms:title | Dasar-Dasar Pemrograman 1 dengan Python | Digunakan untuk mencatat nama resmi sumber belajar agar mudah dikenali. |
 | dcterms:creator | Dr. Fariz Darari | Digunakan untuk mencatat pengajar atau pembuat materi yang tercantum pada informasi mata kuliah. |
-| dcterms:publisher | Universitas Indonesia — UI OpenCourseware | Digunakan untuk mencatat institusi dan platform yang menyediakan sumber belajar secara daring. Nilainya dibedakan dari pembuat materi, yaitu Dr. Fariz Darari. |
+| dcterms:publisher | Universitas Indonesia — UI OpenCourseware | Digunakan untuk mencatat institusi dan platform yang menyediakan sumber belajar secara daring. |
 | dcterms:description | Mata kuliah terbuka tingkat dasar yang membahas konsep dasar pemrograman menggunakan Python, meliputi variabel, tipe data, percabangan, perulangan, fungsi, struktur data, rekursi, dan pemrograman berorientasi objek. | Digunakan untuk memberikan ringkasan isi dan cakupan sumber kepada pengguna. |
 | dcterms:created | 2020 | Digunakan untuk menyatakan tahun acuan pembuatan atau penyelenggaraan materi mata kuliah. |
 | dcterms:type | LearningResource | Digunakan untuk menunjukkan bahwa sumber ini merupakan materi atau sumber pembelajaran, bukan satu artikel atau dokumen biasa. |
