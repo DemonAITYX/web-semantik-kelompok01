@@ -9,3 +9,4 @@
     dcterms:type "LearningResource" ;
     dcterms:language "id" ;
     dcterms:rights "Hak cipta Universitas Indonesia / UI OpenCourseware; lisensi spesifik tidak dicantumkan pada halaman sumber."@id .
+
