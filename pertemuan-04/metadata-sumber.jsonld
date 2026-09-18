@@ -9,7 +9,7 @@
     "language": "dcterms:language",
     "rights": "dcterms:rights"
   },
-  "@id": "https://contoh.github.io/web-semantik/251402134/sumber-belajar",
+  "@id": "https://ocw.ui.ac.id/course/view.php?id=142",
   "title": { 
     "@value": "Dasar-Dasar Pemrograman 1 dengan Python", 
     "@language": "id"
