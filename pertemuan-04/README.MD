@@ -23,6 +23,7 @@
 | dcterms:language | id | Digunakan untuk menyatakan bahwa bahasa utama sumber adalah bahasa Indonesia. |
 | dcterms:rights | Hak cipta Universitas Indonesia / UI OpenCourseware; lisensi spesifik tidak dicantumkan pada halaman sumber. | Digunakan untuk menjelaskan status hak penggunaan sumber tanpa mengklaim lisensi yang tidak tercantum. |
 
+
 ## Hasil validasi
 - JSON-LD Playground: Validasi berhasil tanpa galat (error) sintaks. Pada tampilan N-Quads, URI subjek yang dihasilkan (`<https://ocw.ui.ac.id/course/view.php?id=142>`) sudah sama dan selaras dengan URI subjek yang ada pada file Turtle.
 - Schema Markup Validator: Validasi berhasil dengan hasil 0 ERRORS dan 0 WARNINGS setelah melakukan perbaikan pada properti `license` (yang awalnya teks biasa) diubah menjadi `copyrightNotice` agar sesuai dengan standar skema.
