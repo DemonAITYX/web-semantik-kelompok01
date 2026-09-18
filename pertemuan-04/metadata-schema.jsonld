@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "@id": "https://contoh.github.io/web-semantik/251402134/sumber-belajar",
+  "name": "Dasar-Dasar Pemrograman 1 dengan Python",
+  "description": "Mata kuliah terbuka tingkat dasar yang membahas konsep dasar pemrograman menggunakan Python. Materinya meliputi komputer dan pemrograman, variabel dan tipe data, sistem bilangan, percabangan, perulangan, string, fungsi, struktur data, rekursi, pemrograman berorientasi objek, pewarisan, dan GUI.",
+  "author": {
+    "@type": "Person",
+    "name": "Dr. Fariz Darari"
+  },
+  "inLanguage": "id",
+  "dateCreated": "2020-01-01",
+  "license": "Hak cipta Universitas Indonesia / UI OpenCourseware; lisensi spesifik tidak dicantumkan pada halaman sumber."
+}
