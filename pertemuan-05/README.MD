@@ -11,3 +11,13 @@ Domain yang digunakan dalam latihan ini adalah **kampus Universitas Sumatera Uta
 | **Individual** | Instance konkret dari suatu class               | `IsaDadi` bertipe `DosenTI`, `PemrogramanWeb` bertipe `MataKuliah` |
 | **Property**   | Hubungan atau nilai yang dimiliki suatu entitas | `mengambilMataKuliah`, `mengajarMataKuliah`, `memilikiNIM`                 |
 | **Axiom**      | Pernyataan yang memberikan makna atau aturan    | `Mahasiswa` disjointWith `Dosen`                                           |
+
+## LANGKAH 3 - Eksplorasi Protégé
+
+| Komponen | Isi yang dibuat |
+| --- | --- |
+| Class | `Pizza` |
+| Subclass | `CheesyPizza` |
+| Individual | `Italy` |
+| Object property | `hasTopping` |
+| Datatype property | `hasCaloricContent` |
