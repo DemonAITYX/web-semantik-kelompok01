@@ -1,0 +1,95 @@
+@prefix : <https://ontology.usu.ac.id/semantik/kampus#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ontology.usu.ac.id/semantik/kampus> a owl:Ontology ;
+    rdfs:label "Ontologi Kampus - Kelompok Vasha"@id .
+
+:takesCourse a owl:ObjectProperty ;
+    rdfs:domain :Student ;
+    rdfs:range :Course ;
+    rdfs:label "mengambil mata kuliah"@id .
+
+:teachesCourse a owl:ObjectProperty ;
+    rdfs:domain :Lecturer ;
+    rdfs:range :Course ;
+    rdfs:label "mengajar mata kuliah"@id .
+
+:registeredInDepartment a owl:ObjectProperty ;
+    rdfs:domain :Student ;
+    rdfs:range :Department ;
+    rdfs:label "terdaftar di departemen"@id .
+
+:hasNIM a owl:DatatypeProperty ;
+    rdfs:domain :Student ;
+    rdfs:range xsd:string ;
+    rdfs:label "NIM"@id .
+
+:hasName a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string ;
+    rdfs:label "Nama Lengkap"@id .
+
+:Course a owl:Class ;
+    rdfs:label "Mata Kuliah"@id .
+
+:Department a owl:Class ;
+    rdfs:label "Departemen / Jurusan"@id .
+
+:Person a owl:Class ;
+    rdfs:label "Orang"@id .
+
+:Lecturer a owl:Class ;
+    rdfs:subClassOf :Person ;
+    owl:disjointWith :Student ;
+    rdfs:label "Dosen"@id .
+
+:Student a owl:Class ;
+    rdfs:subClassOf :Person ,
+        [ a owl:Restriction ;
+          owl:onProperty :takesCourse ;
+          owl:someValuesFrom :Course
+        ] ;
+    rdfs:label "Mahasiswa"@id .
+
+:nabil a owl:NamedIndividual, :Student ;
+    :takesCourse :course_web_semantik ;
+    :registeredInDepartment :prodi_ti ;
+    :hasName "NABIL AKBAR SOFYAN"^^xsd:string ;
+    :hasNIM "251402134"^^xsd:string .
+
+:yosua a owl:NamedIndividual, :Student ;
+    :takesCourse :course_web_semantik ;
+    :registeredInDepartment :prodi_ti ;
+    :hasName "YOSUA VALENTINO GULO"^^xsd:string ;
+    :hasNIM "251402055"^^xsd:string .
+
+:bayu a owl:NamedIndividual, :Student ;
+    :takesCourse :course_web_semantik ;
+    :registeredInDepartment :prodi_ti ;
+    :hasName "M. BAYU PRANOTO"^^xsd:string ;
+    :hasNIM "251402066"^^xsd:string .
+
+:vasha a owl:NamedIndividual, :Student ;
+    :takesCourse :course_web_semantik ;
+    :registeredInDepartment :prodi_ti ;
+    :hasName "M. VASHA NADAR"^^xsd:string ;
+    :hasNIM "251402019"^^xsd:string .
+
+:bariq a owl:NamedIndividual, :Student ;
+    :takesCourse :course_web_semantik ;
+    :registeredInDepartment :prodi_ti ;
+    :hasName "ALBARIQI DEANDA TARIGAN"^^xsd:string ;
+    :hasNIM "251402037"^^xsd:string .
+
+:pak_isa_dadi a owl:NamedIndividual, :Lecturer ;
+    :teachesCourse :course_web_semantik ;
+    :hasName "Pak Isa Dadi"^^xsd:string .
+
+:course_web_semantik a owl:NamedIndividual, :Course ;
+    rdfs:label "Web Semantik"@id .
+
+:prodi_ti a owl:NamedIndividual, :Department ;
+    rdfs:label "Teknologi Informasi"@id .
