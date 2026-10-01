@@ -92,3 +92,29 @@ Berikut adalah jawaban untuk pertanyaan pada Langkah 2:
 27. `ex:pemrograman_web` - `ex:hariKuliah` - `"Rabu"@id`
 
 28. `ex:manajemen_sistem_basis_data` - `ex:hariKuliah` - `"Jumat"@id`
+
+## Perbandingan serialisasi
+
+- Turtle: Format yang sangat ringkas, menggunakan titik koma (;) untuk menggabungkan predikat pada subjek yang sama, serta mendukung prefix sehingga lebih mudah dibaca oleh manusia.
+- JSON-LD: Format berbasis skruktur data JSON, menggunakan objek `@context` untuk memetakan kunci ke IRI, sangat cocok disematkan pada sistem web/API.
+- Pernyataan yang sama:
+  * Turtle: `ex:ida a ex:Lecturer .`
+  * JSON-LD:
+    ```json
+    {
+      "@id": "[http://example.org/ida](http://example.org/ida)",
+      "@type": "[http://example.org/Lecturer](http://example.org/Lecturer)"
+    }
+    ```
+
+## Refleksi
+
+1. Kapan object harus berupa IRI dan kapan berupa literal?
+   - Object berupa **IRI** ketika merepresentasikan entitas/objek terpisah yang memiliki identitas sendiri dan bisa memiliki atribut lain (misalnya relasi `ex:ida ex:mengajar ex:web_semantik`).
+   - Object berupa **literal** ketika bernilai data mentah/teks murni yang tidak memiliki relasi lanjutan, seperti nama, angka, atau tanggal (misalnya `foaf:name "Ida Adi"@id` atau `ex:jumlahKredit "3"^^xsd:integer`).
+
+2. Mengapa prefix membantu keterbacaan tanpa mengubah IRI?
+   - Prefix berfungsi sebagai singkatan teks untuk namespace URI yang panjang (misalnya `ex:` menggantikan `http://example.org/`). Hal ini membuat penulisan kode jauh lebih ringkas dan mudah dibaca oleh manusia, namun sistem tetap mengenali dan memprosesnya sebagai IRI lengkap yang unik secara global.
+
+3. Sebutkan satu kesalahan pemodelan yang Anda hindari pada graf ini.
+   - Menjadikan nama dosen atau nama mata kuliah sebagai subjek/IRI langsung (misalnya membuat subjek `http://example.org/Ida Adi` dengan spasi). Kesalahan ini dihindari dengan menggunakan identifier unik yang valid sebagai IRI (`ex:ida`) dan menyimpan nama aslinya dalam bentuk literal menggunakan properti standar (`foaf:name "Ida Adi"@id`).
