@@ -28,3 +28,67 @@ Berikut adalah jawaban untuk pertanyaan pada Langkah 2:
 * *`rdfs`*: Resource Description Framework Schema (atau RDF Schema)
 * *`xsd`*: XML Schema Definition
 * *`foaf`*: Friend of a Friend
+
+## Ringkasan graf
+
+* Jumlah triple: 28
+* Namespace yang digunakan: `ex`, `foaf`, `rdf`, dan `xsd`
+* Entitas: 3 dosen (`ex:ida`, `ex:umay`, `ex:dedy`), 3 mata kuliah (`ex:web_semantik`, `ex:pemrograman_web`, `ex:manajemen_sistem_basis_data`), dan 2 mahasiswa (`ex:vasha`, `ex:bayu`)
+
+## Contoh triple
+
+1. `ex:ida` - `rdf:type` - `ex:Lecturer`
+
+2. `ex:ida` - `foaf:name` - `"Ida Adi"@id`
+
+3. `ex:umay` - `rdf:type` - `ex:Lecturer`
+
+4. `ex:umay` - `foaf:name` - `"Umaya Nasution"@id`
+
+5. `ex:dedy` - `rdf:type` - `ex:Lecturer`
+
+6. `ex:dedy` - `foaf:name` - `"Dedy Arisandi"@id`
+
+7. `ex:web_semantik` - `rdf:type` - `ex:Course`
+
+8. `ex:web_semantik` - `foaf:name` - `"Web Semantik"@id`
+
+9. `ex:pemrograman_web` - `rdf:type` - `ex:Course`
+
+10. `ex:pemrograman_web` - `foaf:name` - `"Pemrograman Web"@id`
+
+11. `ex:manajemen_sistem_basis_data` - `rdf:type` - `ex:Course`
+
+12. `ex:manajemen_sistem_basis_data` - `foaf:name` - `"Manajemen Sistem Basis Data"@id`
+
+13. `ex:vasha` - `rdf:type` - `ex:Student`
+
+14. `ex:vasha` - `foaf:name` - `"Vasha"@id`
+
+15. `ex:bayu` - `rdf:type` - `ex:Student`
+
+16. `ex:bayu` - `foaf:name` - `"Bayu"@id`
+
+17. `ex:ida` - `ex:mengajar` - `ex:web_semantik`
+
+18. `ex:umay` - `ex:mengajar` - `ex:pemrograman_web`
+
+19. `ex:dedy` - `ex:mengajar` - `ex:manajemen_sistem_basis_data`
+
+20. `ex:vasha` - `ex:mengambil` - `ex:web_semantik`
+
+21. `ex:vasha` - `ex:mengambil` - `ex:pemrograman_web`
+
+22. `ex:bayu` - `ex:mengambil` - `ex:manajemen_sistem_basis_data`
+
+23. `ex:web_semantik` - `ex:jumlahKredit` - `3^^xsd:integer`
+
+24. `ex:pemrograman_web` - `ex:jumlahKredit` - `3^^xsd:integer`
+
+25. `ex:manajemen_sistem_basis_data` - `ex:jumlahKredit` - `3^^xsd:integer`
+
+26. `ex:web_semantik` - `ex:hariKuliah` - `"Senin"@id`
+
+27. `ex:pemrograman_web` - `ex:hariKuliah` - `"Rabu"@id`
+
+28. `ex:manajemen_sistem_basis_data` - `ex:hariKuliah` - `"Jumat"@id`
