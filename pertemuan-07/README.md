@@ -1,7 +1,7 @@
 # Pertemuan 7 - Serialisasi RDF
 
 
-## Membandingkan Serialisasi RDF
+## 1. Membandingkan Serialisasi RDF
 
 | Format | Kekuatan utama | Skenario tepat |
 | :--- | :--- | :--- |
