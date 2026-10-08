@@ -1,5 +1,8 @@
 # Pertemuan 7 - Serialisasi RDF
 
+
+## Membandingkan Serialisasi RDF
+
 | Format | Kekuatan utama | Skenario tepat |
 | :--- | :--- | :--- |
 | **Turtle** | Ringkas dan mudah dibaca manusia | Saat menulis ontologi atau data RDF secara manual, keperluan pembelajaran, dan dokumentasi yang membutuhkan validasi manusia. |
