@@ -1,0 +1,29 @@
+[
+  {
+    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik",
+    "@type": [
+      "https://vshndrr-code.github.io/web-semantik/251402019/usu#Course"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Web Semantik"
+      }
+    ]
+  },
+  {
+    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#ida",
+    "@type": [
+      "https://vshndrr-code.github.io/web-semantik/251402019/usu#Lecturer"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Ida Adi"
+      }
+    ],
+    "https://vshndrr-code.github.io/web-semantik/251402019/usu#mengajar": [
+      {
+        "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik"
+      }
+    ]
+  }
+]

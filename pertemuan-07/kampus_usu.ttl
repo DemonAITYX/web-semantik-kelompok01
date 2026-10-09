@@ -1,0 +1,10 @@
+@prefix ex: <https://vshndrr-code.github.io/web-semantik/251402019/usu#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:ida a ex:Lecturer ;
+    ex:mengajar ex:web_semantik ;
+    foaf:name "Ida Adi" .
+
+ex:web_semantik a ex:Course ;
+    foaf:name "Web Semantik" .

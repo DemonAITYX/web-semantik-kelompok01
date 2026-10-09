@@ -1,0 +1,5 @@
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> <http://xmlns.com/foaf/0.1/name> "Web Semantik" .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#ida> <https://vshndrr-code.github.io/web-semantik/251402019/usu#mengajar> <https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Course> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#ida> <http://xmlns.com/foaf/0.1/name> "Ida Adi" .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#ida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Lecturer> .
