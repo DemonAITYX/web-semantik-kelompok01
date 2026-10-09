@@ -4,7 +4,7 @@
 
 ex:ida a ex:Lecturer ;
     ex:mengajar ex:web_semantik ;
-    foaf:name "Ida Adi"@id .
+    foaf:name "Ida Adi" .
 
 ex:web_semantik a ex:Course ;
-    foaf:name "Web Semantik"@id .
+    foaf:name "Web Semantik" .
