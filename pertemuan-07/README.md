@@ -12,9 +12,9 @@
 | **N-Quads** | Menambahkan konteks graf | Saat perlu mengekspor/mengimpor dataset yang berisi banyak graf bernama (*named graphs*) antar *triplestore* tanpa menghilangkan konteks asalnya. |
 
 ## Artefak
-- Graf asal: 28 triple (sebelum ditambahkan reifikasi klasik) / 35 triple (setelah reifikasi klasik)
+- Graf asal: 28 triple (sebelum ditambahkan reifikasi klasik) / 33 triple (setelah reifikasi klasik)
 - Format ekspor: Turtle, JSON-LD, N-Triples
-- Named graph: `ex:gUSU` dan `ex:gFaculty` (dari file `kampus_gabung.trig`)
+- Named graph: `https://vshndrr-code.github.io/web-semantik/251402019/graph/kampus` dan `https://vshndrr-code.github.io/web-semantik/251402019/graph/fakultas` (dari file `kampus_tergabung.trig`)
 
 ## Reifikasi dan provenance
 
