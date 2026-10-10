@@ -1,0 +1,11 @@
+@prefix ex: <https://vshndrr-code.github.io/web-semantik/251402019/usu#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:fasilkom_ti a ex:Faculty ;
+    foaf:name "Fakultas Ilmu Komputer dan Teknologi Informasi"@id ;
+    ex:berlokasiDi "Universitas Sumatera Utara"@id ;
+    ex:memilikiDepartemen ex:departemen_ti .
+
+ex:departemen_ti a ex:Department ;
+    foaf:name "Departemen Teknologi Informasi"@id ;
+    ex:bagianDari ex:fasilkom_ti .
