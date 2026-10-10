@@ -11,13 +11,12 @@
 | **N-Triples** | Satu triple per baris; stabil untuk diff | Saat memproses dataset skala besar (*bulk loading*) atau menyimpan data RDF dalam *version control* (seperti Git) agar perubahan mudah dilacak per baris. |
 | **N-Quads** | Menambahkan konteks graf | Saat perlu mengekspor/mengimpor dataset yang berisi banyak graf bernama (*named graphs*) antar *triplestore* tanpa menghilangkan konteks asalnya. |
 
+## Reifikasi dan provenance
 
-
-
-
-
-
-
+- Triple yang dianotasi: `ex:ida ex:mengajar ex:web_semantik`
+- Creator: `ex:ida`
+- Date: `2026-10-01` (tipe: `xsd:date`)
+- Source: `"Data akademik kampus"`
 
 ## Perbandingan
 
