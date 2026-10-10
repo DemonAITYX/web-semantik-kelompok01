@@ -1,5 +1,28 @@
-<https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> <http://xmlns.com/foaf/0.1/name> "Web Semantik" .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#dedy> <https://vshndrr-code.github.io/web-semantik/251402019/usu#mengajar> <https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> <https://vshndrr-code.github.io/web-semantik/251402019/usu#jumlahKredit> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#vasha> <https://vshndrr-code.github.io/web-semantik/251402019/usu#mengambil> <https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#bayu> <https://vshndrr-code.github.io/web-semantik/251402019/usu#mengambil> <https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#dedy> <http://xmlns.com/foaf/0.1/name> "Dedy Arisandi"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data> <http://xmlns.com/foaf/0.1/name> "Manajemen Sistem Basis Data"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web> <https://vshndrr-code.github.io/web-semantik/251402019/usu#hariKuliah> "Rabu"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#bayu> <http://xmlns.com/foaf/0.1/name> "Bayu"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#ida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Lecturer> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#umay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Lecturer> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#umay> <http://xmlns.com/foaf/0.1/name> "Umaya Nasution"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web> <http://xmlns.com/foaf/0.1/name> "Pemrograman Web"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#vasha> <http://xmlns.com/foaf/0.1/name> "Vasha"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#bayu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Student> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Course> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> <http://xmlns.com/foaf/0.1/name> "Web Semantik"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data> <https://vshndrr-code.github.io/web-semantik/251402019/usu#hariKuliah> "Jumat"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Course> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#umay> <https://vshndrr-code.github.io/web-semantik/251402019/usu#mengajar> <https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#ida> <http://xmlns.com/foaf/0.1/name> "Ida Adi"@id .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#vasha> <https://vshndrr-code.github.io/web-semantik/251402019/usu#mengambil> <https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web> <https://vshndrr-code.github.io/web-semantik/251402019/usu#jumlahKredit> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data> <https://vshndrr-code.github.io/web-semantik/251402019/usu#jumlahKredit> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> <https://vshndrr-code.github.io/web-semantik/251402019/usu#hariKuliah> "Senin"@id .
 <https://vshndrr-code.github.io/web-semantik/251402019/usu#ida> <https://vshndrr-code.github.io/web-semantik/251402019/usu#mengajar> <https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> .
 <https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Course> .
-<https://vshndrr-code.github.io/web-semantik/251402019/usu#ida> <http://xmlns.com/foaf/0.1/name> "Ida Adi" .
-<https://vshndrr-code.github.io/web-semantik/251402019/usu#ida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Lecturer> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#vasha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Student> .
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#dedy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://vshndrr-code.github.io/web-semantik/251402019/usu#Lecturer> .

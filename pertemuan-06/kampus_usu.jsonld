@@ -1,43 +1,19 @@
 [
   {
-    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik",
+    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data",
     "@type": [
       "https://vshndrr-code.github.io/web-semantik/251402019/usu#Course"
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
         "@language": "id",
-        "@value": "Web Semantik"
+        "@value": "Manajemen Sistem Basis Data"
       }
     ],
     "https://vshndrr-code.github.io/web-semantik/251402019/usu#hariKuliah": [
       {
         "@language": "id",
-        "@value": "Senin"
-      }
-    ],
-    "https://vshndrr-code.github.io/web-semantik/251402019/usu#jumlahKredit": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#integer",
-        "@value": 3
-      }
-    ]
-  },
-  {
-    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web",
-    "@type": [
-      "https://vshndrr-code.github.io/web-semantik/251402019/usu#Course"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "id",
-        "@value": "Pemrograman Web"
-      }
-    ],
-    "https://vshndrr-code.github.io/web-semantik/251402019/usu#hariKuliah": [
-      {
-        "@language": "id",
-        "@value": "Rabu"
+        "@value": "Jumat"
       }
     ],
     "https://vshndrr-code.github.io/web-semantik/251402019/usu#jumlahKredit": [
@@ -60,45 +36,45 @@
     ],
     "https://vshndrr-code.github.io/web-semantik/251402019/usu#mengambil": [
       {
-        "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web"
+        "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik"
       },
       {
-        "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik"
+        "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web"
       }
     ]
   },
   {
-    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#ida",
+    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#bayu",
     "@type": [
-      "https://vshndrr-code.github.io/web-semantik/251402019/usu#Lecturer"
+      "https://vshndrr-code.github.io/web-semantik/251402019/usu#Student"
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
         "@language": "id",
-        "@value": "Ida Adi"
+        "@value": "Bayu"
       }
     ],
-    "https://vshndrr-code.github.io/web-semantik/251402019/usu#mengajar": [
+    "https://vshndrr-code.github.io/web-semantik/251402019/usu#mengambil": [
       {
-        "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik"
+        "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data"
       }
     ]
   },
   {
-    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data",
+    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik",
     "@type": [
       "https://vshndrr-code.github.io/web-semantik/251402019/usu#Course"
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
         "@language": "id",
-        "@value": "Manajemen Sistem Basis Data"
+        "@value": "Web Semantik"
       }
     ],
     "https://vshndrr-code.github.io/web-semantik/251402019/usu#hariKuliah": [
       {
         "@language": "id",
-        "@value": "Jumat"
+        "@value": "Senin"
       }
     ],
     "https://vshndrr-code.github.io/web-semantik/251402019/usu#jumlahKredit": [
@@ -126,19 +102,19 @@
     ]
   },
   {
-    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#bayu",
+    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#ida",
     "@type": [
-      "https://vshndrr-code.github.io/web-semantik/251402019/usu#Student"
+      "https://vshndrr-code.github.io/web-semantik/251402019/usu#Lecturer"
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
         "@language": "id",
-        "@value": "Bayu"
+        "@value": "Ida Adi"
       }
     ],
-    "https://vshndrr-code.github.io/web-semantik/251402019/usu#mengambil": [
+    "https://vshndrr-code.github.io/web-semantik/251402019/usu#mengajar": [
       {
-        "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data"
+        "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#web_semantik"
       }
     ]
   },
@@ -156,6 +132,30 @@
     "https://vshndrr-code.github.io/web-semantik/251402019/usu#mengajar": [
       {
         "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#manajemen_sistem_basis_data"
+      }
+    ]
+  },
+  {
+    "@id": "https://vshndrr-code.github.io/web-semantik/251402019/usu#pemrograman_web",
+    "@type": [
+      "https://vshndrr-code.github.io/web-semantik/251402019/usu#Course"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Pemrograman Web"
+      }
+    ],
+    "https://vshndrr-code.github.io/web-semantik/251402019/usu#hariKuliah": [
+      {
+        "@language": "id",
+        "@value": "Rabu"
+      }
+    ],
+    "https://vshndrr-code.github.io/web-semantik/251402019/usu#jumlahKredit": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 3
       }
     ]
   }

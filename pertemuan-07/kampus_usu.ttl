@@ -1,0 +1,39 @@
+@prefix ex: <https://vshndrr-code.github.io/web-semantik/251402019/usu#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:bayu a ex:Student ;
+    foaf:name "Bayu"@id ;
+    ex:mengambil ex:manajemen_sistem_basis_data .
+
+ex:dedy a ex:Lecturer ;
+    foaf:name "Dedy Arisandi"@id ;
+    ex:mengajar ex:manajemen_sistem_basis_data .
+
+ex:ida a ex:Lecturer ;
+    foaf:name "Ida Adi"@id ;
+    ex:mengajar ex:web_semantik .
+
+ex:umay a ex:Lecturer ;
+    foaf:name "Umaya Nasution"@id ;
+    ex:mengajar ex:pemrograman_web .
+
+ex:vasha a ex:Student ;
+    foaf:name "Vasha"@id ;
+    ex:mengambil ex:pemrograman_web,
+        ex:web_semantik .
+
+ex:manajemen_sistem_basis_data a ex:Course ;
+    foaf:name "Manajemen Sistem Basis Data"@id ;
+    ex:hariKuliah "Jumat"@id ;
+    ex:jumlahKredit 3 .
+
+ex:pemrograman_web a ex:Course ;
+    foaf:name "Pemrograman Web"@id ;
+    ex:hariKuliah "Rabu"@id ;
+    ex:jumlahKredit 3 .
+
+ex:web_semantik a ex:Course ;
+    foaf:name "Web Semantik"@id ;
+    ex:hariKuliah "Senin"@id ;
+    ex:jumlahKredit 3 .
