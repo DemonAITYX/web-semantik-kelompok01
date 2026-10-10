@@ -11,6 +11,11 @@
 | **N-Triples** | Satu triple per baris; stabil untuk diff | Saat memproses dataset skala besar (*bulk loading*) atau menyimpan data RDF dalam *version control* (seperti Git) agar perubahan mudah dilacak per baris. |
 | **N-Quads** | Menambahkan konteks graf | Saat perlu mengekspor/mengimpor dataset yang berisi banyak graf bernama (*named graphs*) antar *triplestore* tanpa menghilangkan konteks asalnya. |
 
+## Artefak
+- Graf asal: 28 triple (sebelum ditambahkan reifikasi klasik) / 35 triple (setelah reifikasi klasik)
+- Format ekspor: Turtle, JSON-LD, N-Triples
+- Named graph: `ex:gUSU` dan `ex:gFaculty` (dari file `kampus_gabung.trig`)
+
 ## Reifikasi dan provenance
 
 - Triple yang dianotasi: `ex:ida ex:mengajar ex:web_semantik`
