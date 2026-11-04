@@ -85,12 +85,12 @@ SPARQL dan SQL pada dasarnya digunakan untuk query data, namun terdapat perbedaa
 
 ### 2. Kapan Anda memakai graf lokal (rdflib) dan kapan endpoint publik?
 
-* **Menggunakan Graf Lokal (`rdflib`):**
+* ** Kita menggunakan Graf Lokal pada saat (`rdflib`):**
   * **Pengembangan & Pengujian (Development/Testing):** Saat membuat skema ontologi baru, melakukan *debugging*, atau uji coba query secara lokal tanpa memerlukan koneksi internet.
   * **Data Sensitif/Privat:** Ketika mengolah dataset internal organisasi atau data pribadi yang tidak boleh dipublikasikan ke jaringan luar.
   * **Ukuran Data Terbatas:** Cocok untuk dataset kecil hingga menengah yang dapat ditampung sepenuhnya di dalam memori komputer.
 
-* **Menggunakan Endpoint Publik (misal: DBpedia, Wikidata):**
+* **Sedangkan Endpoint Publik digunakan saat (misal: DBpedia, Wikidata):**
   * **Integrasi Data Global (Linked Open Data):** Saat membutuhkan data eksternal berskala masif (seperti referensi geografi, data sejarah, atau taksonomi publik) untuk memperkaya data lokal.
   * **Query Terdistribusi (Federated Query):** Ketika perlu menggabungkan informasi dari berbagai sumber di seluruh dunia secara *real-time* tanpa harus mengunduh seluruh isi dataset-nya.
   * **Data Berskala Masif:** Untuk mengueri dataset berukuran terabita yang dikelola oleh *triplestore* server berkinerja tinggi.
