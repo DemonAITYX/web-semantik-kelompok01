@@ -69,7 +69,6 @@ Peran `?mk` : berfungsi sebagai penghubung (join variable) antara Pola 1 dan Pol
 <br><br>
 ## Refleksi 
 
-<br><br>
 
 ### 1. Di titik mana SPARQL berbeda dari SQL?
 
