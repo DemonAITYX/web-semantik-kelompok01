@@ -47,3 +47,27 @@ Peran `?mk` : berfungsi sebagai penghubung (join variable) antara Pola 1 dan Pol
   * Sementara itu, data yang tersimpan di dalam graf menggunakan *language-tagged literal*, yaitu `"Web Semantik"@id` (memiliki tag bahasa `@id`). 
   Di dalam standar Semantic Web / RDF, literal dengan tag bahasa dianggap sebagai nilai yang berbeda secara ketat dari string polos, sehingga kueri gagal menemukan kecocokan dan menghasilkan nol baris.
 
+---
+<br><br>
+
+## Langkah 3 - Query lokal
+- IRI dasar graf: [isi]
+- Jumlah triple awal / akhir: [isi] / [isi]
+- Fakta yang ditambahkan: [isi]
+
+## Langkah 4 - Wikidata
+- Jumlah baris Q1 dengan wdt:P31: [isi]
+- Jumlah baris Q1 dengan wdt:P31/wdt:P279*: [isi]
+- Penjelasan perbedaan: [isi]
+
+## Langkah 5 - Endpoint dari Python
+- agent=UA: [isi]
+- setReturnFormat(JSON): [isi]
+- b.get("kotaLabel", {}): [isi]
+  
+---
+<br><br>
+## Refleksi
+1. Di titik mana SPARQL berbeda dari SQL?
+2. Kapan Anda memakai graf lokal (rdflib) dan kapan endpoint publik?
+3. Sebutkan satu hasil query yang mengejutkan dan jelaskan penyebabnya.
