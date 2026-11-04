@@ -67,7 +67,43 @@ Peran `?mk` : berfungsi sebagai penghubung (join variable) antara Pola 1 dan Pol
   
 ---
 <br><br>
-## Refleksi
-1. Di titik mana SPARQL berbeda dari SQL?
-2. Kapan Anda memakai graf lokal (rdflib) dan kapan endpoint publik?
-3. Sebutkan satu hasil query yang mengejutkan dan jelaskan penyebabnya.
+## Refleksi 
+
+<br><br>
+
+### 1. Di titik mana SPARQL berbeda dari SQL?
+
+SPARQL dan SQL pada dasarnya digunakan untuk query data, namun terdapat perbedaan mendasar pada model data, struktur query, serta penanganan data yang hilang:
+
+* **Model Data:** SQL beroperasi pada **model relasional** (tabel, baris, dan kolom yang terstruktur kaku), sedangkan SPARQL beroperasi pada **graf RDF** berupa pasangan tripel (`Subject - Predicate - Object`).
+* **Fleksibilitas Skema:** SQL membutuhkan skema tabel yang didefinisikan secara eksplisit sejak awal (*schema-on-write*). Sebaliknya, SPARQL bekerja pada graf tanpa skema yang mengikat (*schema-on-read*), sehingga penambahan entitas atau hubungan baru dapat dilakukan secara dinamis.
+* **Asumsi Pengetahuan (OWA vs CWA):** 
+  * SQL mengadopsi **Closed World Assumption (CWA)**: jika data tidak ada di basis data, maka dianggap tidak ada/salah.
+  * SPARQL mengadopsi **Open World Assumption (OWA)**: jika fakta tidak ada di dalam graf, artinya fakta tersebut *belum diketahui*, bukan pasti salah.
+* **Identifikasi Sumber Daya:** SPARQL menggunakan **IRI/URI** global untuk mengidentifikasi entitas dan relasi secara universal di web, sedangkan SQL umumnya menggunakan kunci lokal (`Primary Key` / `Foreign Key`) yang terbatas pada lingkup satu basis data.
+
+<br><br>
+
+### 2. Kapan Anda memakai graf lokal (rdflib) dan kapan endpoint publik?
+
+* **Menggunakan Graf Lokal (`rdflib`):**
+  * **Pengembangan & Pengujian (Development/Testing):** Saat membuat skema ontologi baru, melakukan *debugging*, atau uji coba query secara lokal tanpa memerlukan koneksi internet.
+  * **Data Sensitif/Privat:** Ketika mengolah dataset internal organisasi atau data pribadi yang tidak boleh dipublikasikan ke jaringan luar.
+  * **Ukuran Data Terbatas:** Cocok untuk dataset kecil hingga menengah yang dapat ditampung sepenuhnya di dalam memori komputer.
+
+* **Menggunakan Endpoint Publik (misal: DBpedia, Wikidata):**
+  * **Integrasi Data Global (Linked Open Data):** Saat membutuhkan data eksternal berskala masif (seperti referensi geografi, data sejarah, atau taksonomi publik) untuk memperkaya data lokal.
+  * **Query Terdistribusi (Federated Query):** Ketika perlu menggabungkan informasi dari berbagai sumber di seluruh dunia secara *real-time* tanpa harus mengunduh seluruh isi dataset-nya.
+  * **Data Berskala Masif:** Untuk mengueri dataset berukuran terabita yang dikelola oleh *triplestore* server berkinerja tinggi.
+
+<br><br>
+
+### 3. Sebutkan satu hasil query yang mengejutkan dan jelaskan penyebabnya.
+
+* **Hasil Query yang Mengejutkan:**
+  Pola query `?mk ex:nama "Web Semantik"` menghasilkan **0 baris** (kosong), padahal di dalam graf jelas-jelas terdapat data mata kuliah Web Semantik.
+
+* **Penyebabnya:**
+  Terjadi ketidakcocokan tipe data literal (*literal type mismatch*). Pola query mencari string polos (`plain literal`) tanpa tag bahasa (`"Web Semantik"`), sedangkan data yang tersimpan di dalam graf adalah *language-tagged literal* (`"Web Semantik"@id`). 
+  
+  Dalam spesifikasi RDF dan SPARQL, nilai literal dengan tag bahasa dianggap sebagai entitas yang berbeda secara ketat dari string biasa, sehingga pencocokan pola gagal total jika tag bahasanya tidak dimasukkan atau tidak difilter dengan fungsi seperti `STR()`.
