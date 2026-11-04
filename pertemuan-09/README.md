@@ -16,8 +16,8 @@ Jumlah baris hasil akhir : 3 baris
 
 Peran `?mk` : berfungsi sebagai penghubung (join variable) antara Pola 1 dan Pola 2. Kedua pola digabungkan berdasarkan nilai `?mk` yang sama. Meskipun `?mk` tidak ditampilkan karena tidak dicantumkan dalam bagian `SELECT`, variabel tersebut tetap digunakan untuk mencocokkan data pada kedua pola di bagian `WHERE`.
 
-
-
+---
+<br><br>
 
 
 ## Langkah 2 – ASK dan Asumsi Dunia Terbuka
