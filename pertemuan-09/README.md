@@ -20,7 +20,7 @@ Peran `?mk` : berfungsi sebagai penghubung (join variable) antara Pola 1 dan Pol
 <br><br>
 
 
-## Langkah 2 – ASK dan Asumsi Dunia Terbuka
+## Langkah 2 – ASK dan Asumsi Terbuka
 
 ---
 
