@@ -28,7 +28,7 @@ Peran `?mk` : berfungsi sebagai penghubung (join variable) antara Pola 1 dan Pol
 
 * **Hasil:** `false` (salah) karena tripel tersebut tidak ditemukan di dalam grafik RDF yang ada. Berdasarkan data Langkah 1, `ex:budi` hanya mengajar `ex:tif2305`, sedangkan `ex:tif2410` diajar oleh `ex:sari`.
 * **Tafsir Menurut Asumsi Dunia Terbuka (Open World Assumption - OWA):** 
-  Dalam OWA, ketiadaan informasi di dalam basis pengetahuan **tidak berarti** bahwa informasi tersebut salah atau tidak pernah terjadi di dunia nyata. Hasil `false` hanya menunjukkan bahwa *di dalam graf saat ini*, fakta tersebut belum dinyatakan atau belum tercatat. Bisa jadi di dunia nyata Budi memang mengajar mata kuliah tersebut, tetapi data itu belum dimasukkan ke dalam sistem.
+  Dalam OWA, ketiadaan informasi di dalam basis pengetahuan **tidak berarti** bahwa informasi tersebut salah atau tidak pernah terjadi di dunia nyata. Hasil `false` hanya menunjukkan bahwa di dalam graf saat ini, fakta tersebut belum dinyatakan atau belum tercatat. Bisa jadi di dunia nyata Budi memang mengajar mata kuliah tersebut, tetapi data itu belum dimasukkan ke dalam sistem.
 
 ---
 
