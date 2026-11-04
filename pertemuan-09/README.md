@@ -22,8 +22,6 @@ Peran `?mk` : berfungsi sebagai penghubung (join variable) antara Pola 1 dan Pol
 
 ## Langkah 2 – ASK dan Asumsi Dunia Terbuka
 
-Berikut adalah jawaban dan penjelasan untuk setiap pertanyaan pada Langkah 2 berdasarkan data dari Langkah 1.
-
 ---
 
 ### 1. Apa hasil `ASK { ex:budi ex:mengajar ex:tif2410 }`? Bagaimana tafsir yang tepat menurut asumsi dunia terbuka?
