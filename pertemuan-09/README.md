@@ -51,9 +51,9 @@ Peran `?mk` : berfungsi sebagai penghubung (join variable) antara Pola 1 dan Pol
 <br><br>
 
 ## Langkah 3 - Query lokal
-- IRI dasar graf: [isi]
-- Jumlah triple awal / akhir: [isi] / [isi]
-- Fakta yang ditambahkan: [isi]
+- IRI dasar graf: [https://vshndrr-code.github.io/web-semantik/251402019/usu#]
+- Jumlah triple awal / akhir: [28] / [30]
+- Fakta yang ditambahkan: [ex:ida ex:mengajar ex:kecerdasan_buatan dan ex:kecerdasan_buatan foaf:name "Kecerdasan Buatan"@id]
 
 ## Langkah 4 - Wikidata
 - Jumlah baris Q1 dengan wdt:P31: 20
