@@ -1,0 +1,13 @@
+# Q3918 = University
+# Q252 = Indonesia
+# P31 = instance of
+# P17 = country
+# P131 = located in administrative territorial entity
+
+SELECT ?universitas ?kota
+WHERE {
+  ?universitas wdt:P31 wd:Q3918 ;
+               wdt:P17 wd:Q252 ;  
+               wdt:P131 ?kota .   
+}
+LIMIT 20
