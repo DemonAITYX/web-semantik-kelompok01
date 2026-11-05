@@ -1,0 +1,10 @@
+# Q4022 = River
+# P2043 = Length
+
+SELECT ?sungai ?panjang
+WHERE {
+  ?sungai wdt:P31 wd:Q4022 ;
+          wdt:P2043 ?panjang .
+}
+ORDER BY DESC(?panjang)
+LIMIT 5
