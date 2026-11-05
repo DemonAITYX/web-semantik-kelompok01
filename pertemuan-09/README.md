@@ -61,9 +61,9 @@ Peran `?mk` : berfungsi sebagai penghubung (join variable) antara Pola 1 dan Pol
 - Penjelasan perbedaan: Jumlah hasil dapat bertambah karena wdt:P31/wdt:P279* juga mengambil entitas yang merupakan subclass dari University, sehingga cakupan pencariannya lebih luas dibanding hanya menggunakan wdt:P31.
 
 ## Langkah 5 - Endpoint dari Python
-- agent=UA: [isi]
-- setReturnFormat(JSON): [isi]
-- b.get("kotaLabel", {}): [isi]
+- agent=UA: Mengirim header User-Agent yang mengidentifikasi program dan kontak pemilik (email). Wikidata mewajibkan ini agar admin dapat menghubungi pengguna dan tidak memblokir permintaan anonim.
+- setReturnFormat(JSON): Meminta endpoint mengembalikan hasil dalam format SPARQL JSON, sehingga `queryAndConvert()` menghasilkan dict Python (`results` -> `bindings`) yang mudah diolah.
+- b.get("kotaLabel", {}): Variabel `?kotaLabel` bisa tidak terikat pada sebuah baris, sehingga kuncinya tidak ada di dict. `get` dengan default `{}` mencegah KeyError, lalu `.get("value", "")` menghasilkan string kosong.
   
 ---
 <br><br>
