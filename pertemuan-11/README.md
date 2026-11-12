@@ -16,10 +16,10 @@
 ## Langkah 2 - Tebak lalu cek
 | Soal | Tebakan | Hasil mesin | Penjelasan bila meleset |
 |------|---------|-------------|-------------------------|
-| A    | [isi]   | [isi]       | [isi]                   |
-| B    | [isi]   | [isi]       | [isi]                   |
-| C    | [isi]   | [isi]       | [isi]                   |
-| D    | [isi]   | [isi]       | [isi]                   |
+| A    | 3 baris | 3 baris | Operator `*` (*zero-or-more*) menyertakan panjang jalur 0 langkah (`ex:Dosen` itu sendiri) serta 1 langkah (`ex:DosenTetap` dan `ex:DosenTamu`). |
+| B    | 4 baris (duplikat: `ex:sari`) | 4 baris | `ex:sari` memiliki dua kelas (`ex:DosenTetap` dan `ex:DosenTamu`) yang masing-masing punya jalur ke `ex:Pegawai`, sehingga `SELECT` mencetak `ex:sari` sebanyak 2 kali bersama `ex:budi` dan `ex:rudi`. |
+| C    | 3 triple | 3 triple | Hasil `CONSTRUCT` berupa graf RDF (himpunan), sehingga triple duplikat `ex:sari a ex:Pegawai` otomatis digabung menjadi satu. |
+| D    | 0 triple (tanpa error) | 0 triple | Karena `ex:rudi` tidak memiliki `ex:nama`, variabel `?n` menjadi *unbound* (tidak terikat), sehingga triple pada template `CONSTRUCT` diabaikan tanpa pesan error. |
 
 ## Langkah 3 - Graf kampus lokal
 - Berkas sumber dan IRI dasar graf: [isi]
