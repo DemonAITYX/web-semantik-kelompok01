@@ -1,0 +1,15 @@
+# Q6 - universitas di Indonesia sebagai graf (jalankan di query.wikidata.org)
+PREFIX ex: <https://contoh.github.io/web-semantik/251402019/kampus#>;
+CONSTRUCT {
+  ?univ a ex:Universitas ;
+        ex:nama ?nama ;
+        ex:lokasi ?kota .
+}
+WHERE {
+  ?univ wdt:P31/wdt:P279* wd:Q3918 ;   # Q3918 = universitas
+        wdt:P17 wd:Q252 ;              # Q252 = Indonesia
+        wdt:P131 ?kota ;               # P131 = terletak di wilayah administratif
+        rdfs:label ?nama .
+  FILTER ( LANG(?nama) = "id" )
+}
+LIMIT 50
