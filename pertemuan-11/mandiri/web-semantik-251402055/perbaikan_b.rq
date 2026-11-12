@@ -1,0 +1,7 @@
+# Perbaikan: pilih satu bahasa (en) agar tiap orang hanya punya satu ex:nama
+CONSTRUCT { ?o ex:nama ?n . }
+WHERE {
+  VALUES ?o { dbr:Christopher_Nolan dbr:Joko_Anwar dbr:Mira_Lesmana }
+  ?o foaf:name|rdfs:label|schema:name ?n .
+  FILTER ( LANG(?n) = "en" )
+}

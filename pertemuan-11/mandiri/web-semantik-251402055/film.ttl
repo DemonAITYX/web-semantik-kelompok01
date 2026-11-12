@@ -1,0 +1,31 @@
+﻿@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix dbr:    <http://dbpedia.org/resource/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# Data contoh (direkonstruksi; berkas asli LMS tidak tersedia)
+dbr:Inception a dbo:Film ;
+    rdfs:label "Inception"@en ;
+    dbo:director dbr:Christopher_Nolan ;
+    dbo:releaseDate "2010-07-16"^^xsd:date .
+
+dbr:Interstellar_\(film\) a dbo:Film ;
+    rdfs:label "Interstellar"@en ;
+    dbo:director dbr:Christopher_Nolan ;
+    dbo:releaseDate "2014-11-05"^^xsd:date .
+
+dbr:Dunkirk_\(2017_film\) a dbo:Film ;
+    rdfs:label "Dunkirk"@en ;
+    dbo:director dbr:Christopher_Nolan ;
+    dbo:releaseDate "2017-07-21"^^xsd:date .
+
+dbr:Pengabdi_Setan a dbo:Film ;
+    rdfs:label "Satan's Slaves"@en ;
+    dbo:director dbr:Joko_Anwar ;
+    dbo:releaseDate "2017-09-28"^^xsd:date .
+
+dbr:Christopher_Nolan rdfs:label "Christopher Nolan"@en , "Christopher Nolan"@fr .
+dbr:Joko_Anwar        rdfs:label "Joko Anwar"@en , "Joko Anwar"@id .
+dbr:Mira_Lesmana      rdfs:label "Mira Lesmana"@en .
+

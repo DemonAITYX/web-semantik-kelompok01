@@ -1,0 +1,3 @@
+# Tujuan (kota.ttl): semua permukiman sebagai ex:Permukiman
+CONSTRUCT { ?x a ex:Permukiman . }
+WHERE { ?x a ex:Permukiman . }

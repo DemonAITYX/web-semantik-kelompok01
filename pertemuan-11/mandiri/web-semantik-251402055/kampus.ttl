@@ -1,0 +1,12 @@
+@prefix ex:   <http://contoh.id/kampus/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+# Data contoh (direkonstruksi; berkas asli LMS tidak tersedia)
+ex:DosenTetap rdfs:subClassOf ex:Dosen .
+ex:Dosen      rdfs:subClassOf foaf:Person .
+ex:Tendik     rdfs:subClassOf foaf:Person .
+
+ex:budi a ex:DosenTetap .
+ex:sari a ex:Dosen .
+ex:rudi a ex:Tendik .
