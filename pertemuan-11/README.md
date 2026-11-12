@@ -22,12 +22,12 @@
 | D    | 0 triple (tanpa error) | 0 triple | Karena `ex:rudi` tidak memiliki `ex:nama`, variabel `?n` menjadi *unbound* (tidak terikat), sehingga triple pada template `CONSTRUCT` diabaikan tanpa pesan error. |
 
 ## Langkah 3 - Graf kampus lokal
-- Berkas sumber dan IRI dasar graf: [isi]
-- Kelas dosen dan properti nama: [isi]
-- Triple hasil pemetaan: [isi]
-- foaf:Person sebelum / sesudah: [isi] / [isi]
-- Triple asli vs triple turunan: [jawaban]
-- Dosen baru setelah program selesai: [jawaban]
+- Berkas sumber dan IRI dasar graf: `../pertemuan-09/kampus_usu_v2.ttl` (v3 belum ada), 30 triple awal; IRI dasar `https://vshndrr-code.github.io/web-semantik/251402019/usu#`
+- Kelas dosen dan properti nama: `ex:Lecturer` dan `foaf:name`
+- Triple hasil pemetaan: 6 (3 dosen x 2 triple: `a schema:Person` dan `schema:name`)
+- foaf:Person sebelum / sesudah: 0 / 3 (sama dengan jumlah dosen)
+- Triple asli vs triple turunan: Bisa. Triple asli adalah 30 triple dari `kampus_usu_v2.ttl` ditambah 2 triple hierarki hasil `INSERT DATA` (`ex:Lecturer rdfs:subClassOf ex:Pegawai` dan `ex:Pegawai rdfs:subClassOf foaf:Person`) yang kita tulis sendiri. Triple turunan ada 6, yaitu `a ex:Pegawai` dan `a foaf:Person` untuk tiap dosen (`ex:dedy`, `ex:ida`, `ex:umay`), hasil CONSTRUCT lalu ditambahkan ke graf. Di berkas Turtle keduanya tampak sama, tidak ada penanda mana yang turunan.
+- Dosen baru setelah program selesai: Dosen baru tidak otomatis menjadi `foaf:Person` atau `ex:Pegawai`. Materialisasi adalah salinan statis yang dihitung sekali, jadi program harus dijalankan ulang agar triple turunan untuk dosen baru dibuat.
 
 ## Langkah 4 - Wikidata
 - Jumlah triple Q6: [isi]

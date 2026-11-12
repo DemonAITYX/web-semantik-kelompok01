@@ -1,0 +1,11 @@
+@prefix schema: <https://schema.org/> .
+
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#dedy> a schema:Person ;
+    schema:name "Dedy Arisandi"@id .
+
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#ida> a schema:Person ;
+    schema:name "Ida Adi"@id .
+
+<https://vshndrr-code.github.io/web-semantik/251402019/usu#umay> a schema:Person ;
+    schema:name "Umaya Nasution"@id .
+
