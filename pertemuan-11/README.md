@@ -30,11 +30,15 @@
 - Dosen baru setelah program selesai: Dosen baru tidak otomatis menjadi `foaf:Person` atau `ex:Pegawai`. Materialisasi adalah salinan statis yang dihitung sekali, jadi program harus dijalankan ulang agar triple turunan untuk dosen baru dibuat.
 
 ## Langkah 4 - Wikidata
-- Jumlah triple Q6: [isi]
-- Jumlah baris Q6 versi SELECT: [isi]
-- Penjelasan perbedaan: [isi]
-- Q7 dengan + vs *: [isi]
-- Kelas yang mengejutkan dan alasannya: [isi]
+- Jumlah triple Q6: 118
+- Jumlah baris Q6 versi SELECT: 50
+- Penjelasan perbedaan: Jumlah triple CONSTRUCT adalah 118, sedangkan SELECT menghasilkan 50 baris. Secara teori, 50 baris menghasilkan 150 triple karena setiap universitas memiliki tiga informasi, yaitu tipe, nama, dan lokasi. Namun, hasil CONSTRUCT hanya menghasilkan 118 triple karena RDF Graph menghilangkan triple duplikat. Artinya, beberapa triple yang sama hanya dihitung satu kali.
+Kesimpulan: Jumlah triple tidak sama dengan 3 × jumlah baris karena CONSTRUCT menghasilkan graf RDF yang hanya menyimpan triple unik.
+
+- Q7 dengan + vs *: P279+ mencari kelas yang memiliki satu atau lebih hubungan subclass (subkelas) menuju Universitas. Sedangkan, P279* mencari kelas dengan nol atau lebih hubungan subclass. Artinya, kelas Universitas itu sendiri juga dapat ikut muncul dalam hasil.
+Meskipun keduanya menghasilkan 30 results, cara penelusuran hierarkinya berbeda.
+
+- Kelas yang mengejutkan dan alasannya: Salah satu kelas yang mengejutkan adalah _'Coast Guard Academy'_ karena merupakan institusi pendidikan khusus yang melatih calon personel penjaga pantai. Kelas ini bisa menjadi subkelas universitas karena memiliki fungsi sebagai lembaga pendidikan tinggi yang memberikan pendidikan dan pelatihan profesional. Hal ini menunjukkan bahwa hierarki Wikidata tidak hanya mencakup universitas umum, tetapi juga institusi pendidikan khusus.
 
 ## Langkah 5 - Graf dari Python
 - Jumlah triple universitas.ttl: [isi]
