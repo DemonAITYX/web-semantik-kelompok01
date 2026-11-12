@@ -8,7 +8,7 @@ Q_TANPA_TANGGAL = """PREFIX schema: <https://schema.org/>
 SELECT (COUNT(?f) AS ?n) WHERE { ?f a schema:Movie .
   FILTER NOT EXISTS { ?f schema:datePublished ?d } }"""
 
-UA = "KelasWebSemantik/1.0 (email@kampus.ac.id)"   # ganti dengan email Anda
+UA = "KelasWebSemantik/1.0 (albariqideanda@students.usu.ac.id)"   # ganti dengan email Anda
 sp = SPARQLWrapper("https://dbpedia.org/sparql", agent=UA)
 sp.setQuery(Q_NOLAN_GRAF)
 sp.setReturnFormat(TURTLE)
