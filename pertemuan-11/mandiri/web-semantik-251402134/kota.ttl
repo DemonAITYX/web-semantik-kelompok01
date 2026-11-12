@@ -1,0 +1,16 @@
+@prefix ex:   <http://contoh.id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Hierarki kelas
+ex:Kota rdfs:subClassOf ex:Permukiman .
+ex:Desa rdfs:subClassOf ex:Permukiman .
+
+# 3 Permukiman (tidak bertipe langsung ex:Permukiman)
+ex:Medan a ex:Kota ;
+    rdfs:label "Medan"@id .
+
+ex:Surabaya a ex:Kota ;
+    rdfs:label "Surabaya"@id .
+
+ex:Tomok a ex:Desa ;
+    rdfs:label "Tomok"@id .

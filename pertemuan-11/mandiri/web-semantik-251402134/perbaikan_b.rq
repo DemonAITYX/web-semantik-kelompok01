@@ -1,0 +1,12 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX ex: <http://contoh.id/>
+
+CONSTRUCT { ?o ex:nama ?n . }
+WHERE {
+  VALUES ?o { dbr:Christopher_Nolan dbr:Joko_Anwar dbr:Mira_Lesmana }
+  ?o foaf:name|rdfs:label|schema:name ?n .
+  FILTER ( LANG(?n) = "en" )
+}

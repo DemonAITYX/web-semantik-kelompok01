@@ -1,0 +1,13 @@
+@prefix ex:   <http://contoh.id/kampus/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Taksonomi kelas
+ex:DosenTetap rdfs:subClassOf ex:Dosen .
+ex:Dosen      rdfs:subClassOf foaf:Person .
+ex:Mahasiswa  rdfs:subClassOf foaf:Person .
+
+# Individu awal (3 orang)
+ex:budi a ex:DosenTetap .
+ex:sari a ex:Dosen .
+ex:andi a ex:Mahasiswa .

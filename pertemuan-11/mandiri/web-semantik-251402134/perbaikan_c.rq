@@ -1,0 +1,7 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex: <http://contoh.id/>
+
+CONSTRUCT { ?x a ex:Permukiman . }
+WHERE {
+  ?x a/rdfs:subClassOf* ex:Permukiman .
+}

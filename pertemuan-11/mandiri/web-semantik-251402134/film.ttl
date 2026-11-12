@@ -1,0 +1,32 @@
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix dbr:    <http://dbpedia.org/resource/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# 3 Film Christopher Nolan
+dbr:Inception a dbo:Film ;
+    dbo:director dbr:Christopher_Nolan ;
+    rdfs:label "Inception"@en ;
+    dbo:releaseDate "2010-07-16"^^xsd:date .
+
+dbr:Interstellar a dbo:Film ;
+    dbo:director dbr:Christopher_Nolan ;
+    rdfs:label "Interstellar"@en ;
+    dbo:releaseDate "2014-11-07"^^xsd:date .
+
+dbr:Oppenheimer a dbo:Film ;
+    dbo:director dbr:Christopher_Nolan ;
+    rdfs:label "Oppenheimer"@en ;
+    dbo:releaseDate "2023-07-21"^^xsd:date .
+
+# 3 Sutradara dengan 2 tag bahasa (@en dan @id)
+dbr:Christopher_Nolan
+    foaf:name "Christopher Nolan"@en , "Christopher Nolan"@id .
+
+dbr:Joko_Anwar
+    rdfs:label "Joko Anwar"@en , "Joko Anwar"@id .
+
+dbr:Mira_Lesmana
+    schema:name "Mira Lesmana"@en , "Mira Lesmana"@id .
