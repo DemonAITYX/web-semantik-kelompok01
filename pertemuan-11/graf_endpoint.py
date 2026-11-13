@@ -1,4 +1,4 @@
-import csv
+﻿import csv
 from pathlib import Path
 from SPARQLWrapper import SPARQLWrapper, TURTLE
 from rdflib import Graph
@@ -16,7 +16,7 @@ g.serialize("universitas.ttl", format="turtle")
 
 # Query lokal pada graf yang sudah disimpan: tidak menyentuh endpoint lagi
 q_kota = """
-PREFIX ex: <https://contoh.github.io/web-semantik/251402019/kampus#>
+PREFIX ex: <https://vshndrr-code.github.io/web-semantik/251402019/kampus#>
 SELECT ?kota (COUNT(DISTINCT ?u) AS ?jumlah) WHERE {
   ?u a ex:Universitas ;
      ex:lokasi ?kota .
@@ -30,3 +30,4 @@ with open("universitas_per_kota.csv", "w", newline="", encoding="utf-8") as f:
     for b in g.query(q_kota):
         w.writerow([str(b.kota), int(b.jumlah)])
 print("CSV tersimpan: universitas_per_kota.csv")
+
