@@ -41,7 +41,7 @@ Meskipun keduanya menghasilkan 30 results, cara penelusuran hierarkinya berbeda.
 - Kelas yang mengejutkan dan alasannya: Salah satu kelas yang mengejutkan adalah _'Coast Guard Academy'_ karena merupakan institusi pendidikan khusus yang melatih calon personel penjaga pantai. Kelas ini bisa menjadi subkelas universitas karena memiliki fungsi sebagai lembaga pendidikan tinggi yang memberikan pendidikan dan pelatihan profesional. Hal ini menunjukkan bahwa hierarki Wikidata tidak hanya mencakup universitas umum, tetapi juga institusi pendidikan khusus.
 
 ## Langkah 5 - Graf dari Python
-- Jumlah triple universitas.ttl: 114 (sesuai keluaran `Triple dari Wikidata:` saat program dijalankan; jumlah ini sama dengan Q6 pada Langkah 4 karena memakai query yang sama)
+- Jumlah triple universitas.ttl: 114 (sesuai keluaran `Triple dari Wikidata:` saat program dijalankan). Jumlah ini berbeda dari Q6 pada Langkah 4 (118) karena Q6 dijalankan di browser pada waktu yang berbeda; data Wikidata terus berubah dan query memakai `LIMIT 50` tanpa `ORDER BY`, sehingga 50 solution yang terambil bisa berbeda di tiap eksekusi
 - Jumlah baris universitas_per_kota.csv: 47 (tanpa baris header)
 - setReturnFormat(TURTLE): Meminta endpoint Wikidata mengembalikan hasil query CONSTRUCT dalam format Turtle (graf RDF), bukan JSON atau XML, sehingga hasilnya dapat langsung dibaca sebagai graf.
 - Graph().parse(data=...): Membaca teks Turtle yang dikembalikan endpoint menjadi graf rdflib di memori, sehingga graf dapat disimpan ke `universitas.ttl` dan di-query secara lokal.
