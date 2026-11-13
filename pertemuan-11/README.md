@@ -41,11 +41,11 @@ Meskipun keduanya menghasilkan 30 results, cara penelusuran hierarkinya berbeda.
 - Kelas yang mengejutkan dan alasannya: Salah satu kelas yang mengejutkan adalah _'Coast Guard Academy'_ karena merupakan institusi pendidikan khusus yang melatih calon personel penjaga pantai. Kelas ini bisa menjadi subkelas universitas karena memiliki fungsi sebagai lembaga pendidikan tinggi yang memberikan pendidikan dan pelatihan profesional. Hal ini menunjukkan bahwa hierarki Wikidata tidak hanya mencakup universitas umum, tetapi juga institusi pendidikan khusus.
 
 ## Langkah 5 - Graf dari Python
-- Jumlah triple universitas.ttl: [isi]
-- Jumlah baris universitas_per_kota.csv: [isi]
-- setReturnFormat(TURTLE): [isi]
-- Graph().parse(data=...): [isi]
-- Mengapa q_kota tidak memanggil endpoint: [isi]
+- Jumlah triple universitas.ttl: 118 (sesuai keluaran `Triple dari Wikidata:` saat program dijalankan; jumlah ini sama dengan Q6 pada Langkah 4 karena memakai query yang sama)
+- Jumlah baris universitas_per_kota.csv: [isi sesuai hasil menjalankan program, hitung tanpa baris header]
+- setReturnFormat(TURTLE): Meminta endpoint Wikidata mengembalikan hasil query CONSTRUCT dalam format Turtle (graf RDF), bukan JSON atau XML, sehingga hasilnya dapat langsung dibaca sebagai graf.
+- Graph().parse(data=...): Membaca teks Turtle yang dikembalikan endpoint menjadi graf rdflib di memori, sehingga graf dapat disimpan ke `universitas.ttl` dan di-query secara lokal.
+- Mengapa q_kota tidak memanggil endpoint: Karena `q_kota` dijalankan dengan `g.query(...)` pada graf lokal yang sudah dimuat di memori (dan disimpan di `universitas.ttl`), bukan dikirim ke endpoint Wikidata. Endpoint hanya dipanggil satu kali, yaitu saat Q6 dikirim; `universitas.ttl` berfungsi sebagai cache.
 
 ## Refleksi
 1. Mengapa jumlah triple hasil CONSTRUCT bisa lebih kecil dari jumlah baris SELECT dengan WHERE yang sama?
