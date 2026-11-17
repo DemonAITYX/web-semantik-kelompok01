@@ -106,4 +106,4 @@ Pemilihan ini didukung oleh temuan pada Bagian A dan Bagian D (`rusak_b.rq`). Pa
 | 2 | Bagian B2 (`q_demo_b.rq`) untuk 16 film Nolan tanpa `dbo:releaseDate` tidak mencetak `schema:datePublished` tanpa error, serta Bagian D (`rusak_a.rq`) di mana `?film` tak terikat menghasilkan 0 triple tanpa error. |
 | 3 | Bagian D (`rusak_b.rq` / `perbaikan_b.rq`) yang memakai `VALUES ?o { ... }` dan jalur `foaf:name\|rdfs:label\|schema:name` untuk menyatukan tiga predikat nama berbeda. |
 | 4 | Bagian A (`wdt:P31/wdt:P279* wd:Q515`), Bagian C (`a/rdfs:subClassOf*` menghasilkan 7 triple di putaran 1), dan Bagian D (`perbaikan_c.rq` menghasilkan 3 triple: Medan, Surabaya, Tomok). |
-| 5 | Bagian C1 dan C2 (`demo_d.py` dan `materialisasi_ulang.py`), di mana setelah Rina masuk hitungan `Person` tetap `3` dan baru menjadi `4` setelah aturan dijalankan ulang pada Putaran 2. |
+| 5 | Bagian C1 dan C2 (`demo_d.py` dan `materialisasi_ulang.py`), di mana setelah Rina masuk hitungan `Person` tetap `3` dan baru menjadi `4` setelah aturan dijalankan ulang pada Putaran 2. |  
