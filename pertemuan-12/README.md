@@ -18,7 +18,7 @@
 - Jumlah triple turunan bermakna: 12 (6 pada putaran pertama, 6 pada putaran kedua). Putaran ketiga tidak menghasilkan triple baru, sehingga closure sudah tercapai.
 - Triple yang baru ditemukan di putaran kedua: #7–#12. Yang paling penting ialah `ex:budi a ex:Orang`, `ex:sari a ex:Orang`, dan `ex:andi a ex:Orang`, yang baru bisa dicapai setelah subkelas `ex:Dosen` dan `ex:DosenTamu` tersambung ke `ex:Orang` melalui `ex:Pegawai`.
 - Triple asserted yang tidak menurunkan apa pun: `ex:andi a ex:MahasiswaBerprestasi`. Alasannya, tidak ada aksioma `rdfs:subClassOf` yang berawal dari `ex:MahasiswaBerprestasi`, sehingga rdfs9 tidak dapat diterapkan. Semua triple asserted RDFS lainnya ikut menurunkan minimal satu triple.
-- Catatan: triple umum seperti `x a rdfs:Resource` dan `ex:Dosen rdfs:subClassOf ex:Dosen` sengaja diabaikan sesuai instruksi.
+- triple umum seperti `x a rdfs:Resource` dan `ex:Dosen rdfs:subClassOf ex:Dosen` sengaja diabaikan sesuai instruksi.
 
 ## Langkah 2 - Tebak lalu cek
 | Soal | Profil | Tebakan | Hasil mesin | Penjelasan bila meleset |
