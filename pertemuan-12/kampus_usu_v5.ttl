@@ -45,3 +45,9 @@ ex:web_semantik a ex:Course ;
     ex:hariKuliah "Senin"@id ;
     ex:jumlahKredit 3 .
 
+ex:Lecturer rdfs:subClassOf ex:Pegawai .
+
+ex:Pegawai rdfs:subClassOf foaf:Person .
+
+ex:mengajar rdfs:domain ex:Lecturer ;
+            rdfs:range ex:Course .
