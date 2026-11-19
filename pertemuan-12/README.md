@@ -3,10 +3,22 @@
 ## Langkah 1 - Closure dengan tangan
 | # | Triple turunan | Aturan | Premis |
 |---|----------------|--------|--------|
-| [isi] | [isi] | [isi] | [isi] |
-- Jumlah triple turunan bermakna: [isi]
-- Triple yang baru ditemukan di putaran kedua: [isi]
-- Triple asserted yang tidak menurunkan apa pun, dan alasannya: [isi]
+| 1 | `ex:budi a ex:Dosen` | rdfs2 (putaran 1) | domain `ex:membimbing` = `ex:Dosen` + `ex:budi ex:membimbing ex:andi` |
+| 2 | `ex:andi a ex:Mahasiswa` | rdfs3 (putaran 1) | range `ex:membimbing` = `ex:Mahasiswa` + `ex:budi ex:membimbing ex:andi` |
+| 3 | `ex:budi ex:mengenal ex:andi` | rdfs7 (putaran 1) | `ex:membimbing` ⊑ `ex:mengenal` + `ex:budi ex:membimbing ex:andi` |
+| 4 | `ex:sari a ex:Dosen` | rdfs9 (putaran 1) | `ex:DosenTamu` ⊑ `ex:Dosen` + `ex:sari a ex:DosenTamu` |
+| 5 | `ex:DosenTamu rdfs:subClassOf ex:Pegawai` | rdfs11 (putaran 1) | `ex:DosenTamu` ⊑ `ex:Dosen` + `ex:Dosen` ⊑ `ex:Pegawai` |
+| 6 | `ex:Dosen rdfs:subClassOf ex:Orang` | rdfs11 (putaran 1) | `ex:Dosen` ⊑ `ex:Pegawai` + `ex:Pegawai` ⊑ `ex:Orang` |
+| 7 | `ex:budi a ex:Pegawai` | rdfs9 (putaran 2) | `ex:Dosen` ⊑ `ex:Pegawai` + #1 `ex:budi a ex:Dosen` |
+| 8 | `ex:sari a ex:Pegawai` | rdfs9 (putaran 2) | `ex:DosenTamu` ⊑ `ex:Pegawai` (#5) + `ex:sari a ex:DosenTamu` |
+| 9 | `ex:budi a ex:Orang` | rdfs9 (putaran 2) | `ex:Dosen` ⊑ `ex:Orang` (#6) + #1 `ex:budi a ex:Dosen` |
+| 10 | `ex:sari a ex:Orang` | rdfs9 (putaran 2) | `ex:Dosen` ⊑ `ex:Orang` (#6) + #4 `ex:sari a ex:Dosen` |
+| 11 | `ex:andi a ex:Orang` | rdfs9 (putaran 2) | `ex:Mahasiswa` ⊑ `ex:Orang` + #2 `ex:andi a ex:Mahasiswa` |
+| 12 | `ex:DosenTamu rdfs:subClassOf ex:Orang` | rdfs11 (putaran 2) | `ex:DosenTamu` ⊑ `ex:Pegawai` (#5) + `ex:Pegawai` ⊑ `ex:Orang` |
+- Jumlah triple turunan bermakna: 12 (6 pada putaran pertama, 6 pada putaran kedua). Putaran ketiga tidak menghasilkan triple baru, sehingga closure sudah tercapai.
+- Triple yang baru ditemukan di putaran kedua: #7–#12. Yang paling penting ialah `ex:budi a ex:Orang`, `ex:sari a ex:Orang`, dan `ex:andi a ex:Orang`, yang baru bisa dicapai setelah subkelas `ex:Dosen` dan `ex:DosenTamu` tersambung ke `ex:Orang` melalui `ex:Pegawai`.
+- Triple asserted yang tidak menurunkan apa pun: `ex:andi a ex:MahasiswaBerprestasi`. Alasannya, tidak ada aksioma `rdfs:subClassOf` yang berawal dari `ex:MahasiswaBerprestasi`, sehingga rdfs9 tidak dapat diterapkan. Semua triple asserted RDFS lainnya ikut menurunkan minimal satu triple.
+- Catatan: triple umum seperti `x a rdfs:Resource` dan `ex:Dosen rdfs:subClassOf ex:Dosen` sengaja diabaikan sesuai instruksi.
 
 ## Langkah 2 - Tebak lalu cek
 | Soal | Profil | Tebakan | Hasil mesin | Penjelasan bila meleset |
@@ -39,5 +51,8 @@
 
 ## Refleksi
 1. Mengapa graf asserted disimpan terpisah dari graf inferred, dan apa akibatnya bila keduanya dicampur seperti kampus_usu_v4.ttl?
+   - Jawaban: Graf asserted berisi fakta yang memang dicatat sumbernya dan menjadi acuan audit. Graf inferred hanya turunan yang bergantung pada profil dan aturan tertentu. Bila keduanya dicampur, kita tidak bisa lagi membedakan fakta yang dicatat dari fakta turunan. Akibatnya, menghapus triple asserted yang keliru tidak ikut menghapus turunannya sehingga data menjadi basi, dan konflik antar profil sulit ditelusuri. Pemisahan ini juga membuat closure bisa dihitung ulang kapan saja tanpa merusak sumber.
 2. Pada Langkah 2, profil RDFS tidak memberi tahu bahwa aksioma OWL diabaikan. Bagaimana Anda akan memastikan profil yang dipakai sudah tepat untuk data Anda?
+   - Jawaban: Pertama, periksa data dengan mencari predikat dan tipe dari namespace `owl:` (misalnya `owl:inverseOf`, `owl:TransitiveProperty`, `owl:disjointWith`). Bila ada, profil harus minimal OWL RL. Bila hanya RDFS, profil RDFS sudah cukup. Kedua, jangan menganggap "tidak ada error" sebagai bukti bahwa semua aksioma diproses, karena reasoner bisa diam. Ketiga, uji dengan contoh kecil seperti pada Langkah 2: buat tebakan dulu, lalu bandingkan dengan hasil mesin. Bila selisihnya muncul, berarti profil belum sesuai.
 3. Kapan Anda memilih menulis jalur seperti wdt:P279* di query, dan kapan memilih menjalankan reasoner lalu menyimpan closure?
+   - Jawaban: Saya memilih jalur `wdt:P279*` bila data sumber besar, sering berubah, atau tidak boleh disalin, misalnya pada WDQS yang tidak menyimpan closure dan menghitung relasi saat query. Saya memilih menjalankan reasoner lalu menyimpan closure bila data lokal relatif stabil, banyak query membutuhkan hasil turunan, dan kita perlu query yang sederhana serta cepat. Trade-off-nya: closure bisa basi bila data sumber berubah dan harus dihitung ulang, sedangkan jalur properti bisa lambat pada data besar.
