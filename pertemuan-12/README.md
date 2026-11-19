@@ -30,11 +30,14 @@
 | D | OWL RL | False | False | Tepat — `False` berarti fakta `ex:medan a ex:Tempat` **tidak diketahui / tidak dapat dibuktikan** dari graf saat ini (prinsip dunia terbuka / *Open World Assumption*), bukan berarti Medan salah atau bukan tempat. |
 
 ## Langkah 3 - Reasoner pada graf kampus
-- Berkas sumber dan IRI dasar graf: [isi]
-- Asserted / closure / inferred / bermakna: [isi] / [isi] / [isi] / [isi]
-- Triple di v4 yang tidak ada di asserted: [isi]
-- Turunan yang muncul karena domain dan range ex:mengajar: [jawaban]
-- Bila menambah dosen baru: [jawaban]
+
+- **Berkas sumber dan IRI dasar graf:** `pertemuan-09/kampus_usu_v2.ttl` dan `https://vshndrr-code.github.io/web-semantik/251402019/usu#`
+- **Asserted / closure / inferred / bermakna:** 32 / 77 / 45 / 1
+- **Triple di v4 yang tidak ada di asserted:** 8
+- **Turunan yang muncul karena domain dan range `ex:mengajar`:** Domain `ex:mengajar` adalah `ex:Lecturer`, sedangkan range-nya adalah `ex:Course`. Domain menyimpulkan bahwa subjek yang menggunakan properti `ex:mengajar` merupakan dosen, sedangkan range menyimpulkan bahwa objeknya merupakan mata kuliah. Salah satu triple turunan yang muncul adalah `ex:kecerdasan_buatan rdf:type ex:Course`.
+- **Bila menambah dosen baru:** Saya perlu menambahkan individu dosen baru ke dalam graf asserted, memberikan tipe `ex:Lecturer`, serta menambahkan relasi `ex:mengajar` jika dosen tersebut mengajar mata kuliah. Setelah itu, reasoner dijalankan kembali agar menghasilkan triple turunan terbaru.
+
+**Screenshot output:** `screenshots/output-lokal.png`
 
 ## Langkah 4 - Wikidata
 - ?n Q8 / Q9: 877 / 1343
