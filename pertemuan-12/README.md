@@ -45,12 +45,35 @@
 - Satu subkelas yang menyumbang selisih: Universitas swasta (`wd:Q902104`), yang berstatus subkelas universitas (cocok dengan hasil Q7 Pertemuan 11) dan di Indonesia dipakai sebagai tipe langsung oleh 320 item. Subkelas lain: politeknik (`wd:Q845392`, 375 item) dan universitas negeri (`wd:Q875538`, 73 item). Angka ini dihitung per subkelas, jadi item yang punya beberapa tipe bisa terhitung lebih dari sekali.
 - WDQS: materialisasi, saat query, atau tidak keduanya: Tidak keduanya. WDQS tidak menurunkan triple `P31` baru untuk subkelas (bukan materialisasi) dan tidak menalar otomatis saat query (bukan penalaran saat query). Ia hanya mencocokkan pola yang ada, sehingga Q8 tidak menemukan subkelas. Aturan rdfs9 (instance dari subkelas juga instance dari superkelas) di Q9 sebenarnya dijalankan oleh kita sendiri lewat jalur `wdt:P279*` yang kita tulis di query, bukan oleh WDQS.
 
-## Langkah 5 - Konsistensi
-- Pesan galat RDFS / OWL RL: [isi] / [isi]
-- Individu yang disebut pesan: [isi]
-- Setelah baris terbalik dihapus: [isi]
-- Isi laporan_kelas.csv sebelum dan sesudah: [isi]
-- Dari mana dosen menjadi mata kuliah: [jawaban]
+## Langkah 5 - Konsistensi Graf
+
+- **Pesan galat RDFS / OWL RL:** RDFS menghasilkan 0 pesan galat, sedangkan OWL RL menghasilkan minimal 1 pesan galat pada pengujian pertama.
+- **Individu yang disebut pesan:** `ida` dan `web_semantik`. Keduanya terlibat dalam pelanggaran aturan disjoint class.
+- **Setelah baris terbalik dihapus:** RDFS dan OWL RL sama-sama menghasilkan 0 pesan galat karena tidak ditemukan lagi individu yang termasuk ke dalam dua kelas yang saling bertentangan.
+
+### Isi laporan_kelas.csv sebelum dan sesudah
+
+Sebelum triple terbalik dihapus:
+
+| Kelas | Asserted | RDFS | OWL RL |
+|---|---:|---:|---:|
+| Lecturer | 3 | 4 | 4 |
+| Pegawai | 0 | 4 | 4 |
+| Course | 3 | 4 | 4 |
+
+Sesudah triple terbalik dihapus:
+
+| Kelas | Asserted | RDFS | OWL RL |
+|---|---:|---:|---:|
+| Lecturer | 3 | 3 | 3 |
+| Pegawai | 0 | 3 | 3 |
+| Course | 3 | 3 | 3 |
+
+### Dari mana dosen menjadi mata kuliah?
+
+Reasoner mengetahui bahwa dosen juga menjadi mata kuliah melalui aturan domain dan range pada properti `ex:mengajar`. Ketika triple yang salah `ex:web_semantik ex:mengajar ex:ida` ditambahkan, aturan range menyimpulkan bahwa `ex:ida` merupakan anggota kelas `ex:Course`. Padahal, `ex:ida` sudah termasuk kelas `ex:Lecturer` yang merupakan subclass dari `ex:Pegawai`. Karena `ex:Pegawai` dinyatakan saling lepas dengan `ex:Course` menggunakan `owl:disjointWith`, kondisi tersebut dianggap sebagai inkonsistensi oleh OWL RL.
+
+Profil RDFS tidak melaporkan kesalahan tersebut karena RDFS tidak memiliki mekanisme pemeriksaan konflik kelas melalui `owl:disjointWith`. Setelah triple yang sengaja dibalik dihapus, inkonsistensi tidak lagi ditemukan.
 <br>
 
 ## Refleksi
