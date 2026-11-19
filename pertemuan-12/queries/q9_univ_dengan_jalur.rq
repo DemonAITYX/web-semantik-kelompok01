@@ -1,0 +1,5 @@
+# Q9 - universitas di Indonesia, termasuk instance dari subkelas universitas (jalankan di query.wikidata.org)
+SELECT (COUNT(DISTINCT ?univ) AS ?n) WHERE {
+  ?univ wdt:P31/wdt:P279* wd:Q3918 ;   # P279 = subclass of, Q3918 = universitas
+        wdt:P17 wd:Q252 .              # P17 = negara, Q252 = Indonesia
+}

@@ -37,10 +37,10 @@
 - Bila menambah dosen baru: [jawaban]
 
 ## Langkah 4 - Wikidata
-- ?n Q8 / Q9: [isi] / [isi]
-- Penyebab selisih: [isi]
-- Satu subkelas yang menyumbang selisih: [isi]
-- WDQS: materialisasi, saat query, atau tidak keduanya: [jawaban]
+- ?n Q8 / Q9: 877 / 1343
+- Penyebab selisih: Q9 lebih besar 466 karena jalur `wdt:P31/wdt:P279*` ikut menghitung universitas yang bertipe subkelas dari universitas, sedangkan Q8 (`wdt:P31 wd:Q3918`) hanya menghitung item yang tipenya langsung "universitas". Banyak institusi di Wikidata diberi tipe yang lebih spesifik, misalnya "universitas swasta" atau "politeknik", dan tidak pernah ditulis sebagai `P31 wd:Q3918`. Hierarki kelas yang disimpan sama untuk kedua query. Bedanya, Q8 tidak menelusurinya dan Q9 menelusurinya lewat jalur yang kita tulis sendiri.
+- Satu subkelas yang menyumbang selisih: Universitas swasta (`wd:Q902104`), yang berstatus subkelas universitas (cocok dengan hasil Q7 Pertemuan 11) dan di Indonesia dipakai sebagai tipe langsung oleh 320 item. Subkelas lain: politeknik (`wd:Q845392`, 375 item) dan universitas negeri (`wd:Q875538`, 73 item). Angka ini dihitung per subkelas, jadi item yang punya beberapa tipe bisa terhitung lebih dari sekali.
+- WDQS: materialisasi, saat query, atau tidak keduanya: Tidak keduanya. WDQS tidak menurunkan triple `P31` baru untuk subkelas (bukan materialisasi) dan tidak menalar otomatis saat query (bukan penalaran saat query). Ia hanya mencocokkan pola yang ada, sehingga Q8 tidak menemukan subkelas. Aturan rdfs9 (instance dari subkelas juga instance dari superkelas) di Q9 sebenarnya dijalankan oleh kita sendiri lewat jalur `wdt:P279*` yang kita tulis di query, bukan oleh WDQS.
 
 ## Langkah 5 - Konsistensi
 - Pesan galat RDFS / OWL RL: [isi] / [isi]
