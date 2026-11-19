@@ -63,8 +63,3 @@
 
 3. Kapan Anda memilih menulis jalur seperti wdt:P279* di query, dan kapan memilih menjalankan reasoner lalu menyimpan closure?
    - Jawaban: Saya memilih jalur `wdt:P279*` bila data sumber besar, sering berubah, atau tidak boleh disalin, misalnya pada WDQS yang tidak menyimpan closure dan menghitung relasi saat query. Saya memilih menjalankan reasoner lalu menyimpan closure bila data lokal relatif stabil, banyak query membutuhkan hasil turunan, dan kita perlu query yang sederhana serta cepat. Trade-off-nya: closure bisa basi bila data sumber berubah dan harus dihitung ulang, sedangkan jalur properti bisa lambat pada data besar.
-
-
-
-> **Jawaban:** Saya memilih jalur `wdt:P279*` bila data sumber besar, sering berubah, atau tidak boleh disalin, misalnya pada WDQS yang tidak menyimpan closure dan menghitung relasi saat query. Saya memilih menjalankan reasoner lalu menyimpan closure bila data lokal relatif stabil, banyak query membutuhkan hasil turunan, dan kita perlu query yang sederhana serta cepat. Trade-off-nya: closure bisa basi bila data sumber berubah dan harus dihitung ulang, sedangkan jalur properti bisa lambat pada data besar.
-
