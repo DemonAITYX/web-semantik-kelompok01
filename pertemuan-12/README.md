@@ -48,15 +48,23 @@
 - Setelah baris terbalik dihapus: [isi]
 - Isi laporan_kelas.csv sebelum dan sesudah: [isi]
 - Dari mana dosen menjadi mata kuliah: [jawaban]
+<br>
 
 ## Refleksi
-**Soal 1.** Mengapa graf asserted disimpan terpisah dari graf inferred, dan apa akibatnya bila keduanya dicampur seperti kampus_usu_v4.ttl?
+1. Mengapa graf asserted disimpan terpisah dari graf inferred, dan apa akibatnya bila keduanya dicampur seperti kampus_usu_v4.ttl?
+   - Jawaban: Graf asserted berisi fakta yang memang dicatat sumbernya dan menjadi acuan audit. Graf inferred hanya turunan yang bergantung pada profil dan aturan tertentu. Bila keduanya dicampur, kita tidak bisa lagi membedakan fakta yang dicatat dari fakta turunan. Akibatnya, menghapus triple asserted yang keliru tidak ikut menghapus turunannya sehingga data menjadi basi, dan konflik antar profil sulit ditelusuri. Pemisahan ini juga membuat closure bisa dihitung ulang kapan saja tanpa merusak sumber.
 
-> **Jawaban:** Graf asserted berisi fakta yang memang dicatat sumbernya dan menjadi acuan audit. Graf inferred hanya turunan yang bergantung pada profil dan aturan tertentu. Bila keduanya dicampur, kita tidak bisa lagi membedakan fakta yang dicatat dari fakta turunan. Akibatnya, menghapus triple asserted yang keliru tidak ikut menghapus turunannya sehingga data menjadi basi, dan konflik antar profil sulit ditelusuri. Pemisahan ini juga membuat closure bisa dihitung ulang kapan saja tanpa merusak sumber.
-**Soal 2.** Pada Langkah 2, profil RDFS tidak memberi tahu bahwa aksioma OWL diabaikan. Bagaimana Anda akan memastikan profil yang dipakai sudah tepat untuk data Anda?
+<br>
 
-> **Jawaban:** Pertama, periksa data dengan mencari predikat dan tipe dari namespace `owl:` (misalnya `owl:inverseOf`, `owl:TransitiveProperty`, `owl:disjointWith`). Bila ada, profil harus minimal OWL RL. Bila hanya RDFS, profil RDFS sudah cukup. Kedua, jangan menganggap "tidak ada error" sebagai bukti bahwa semua aksioma diproses, karena reasoner bisa diam. Ketiga, uji dengan contoh kecil seperti pada Langkah 2: buat tebakan dulu, lalu bandingkan dengan hasil mesin. Bila selisihnya muncul, berarti profil belum sesuai.
-**Soal 3.** Kapan Anda memilih menulis jalur seperti `wdt:P279*` di query, dan kapan memilih menjalankan reasoner lalu menyimpan closure?
+2. Pada Langkah 2, profil RDFS tidak memberi tahu bahwa aksioma OWL diabaikan. Bagaimana Anda akan memastikan profil yang dipakai sudah tepat untuk data Anda?
+   - Jawaban: Pertama, periksa data dengan mencari predikat dan tipe dari namespace `owl:` (misalnya `owl:inverseOf`, `owl:TransitiveProperty`, `owl:disjointWith`). Bila ada, profil harus minimal OWL RL. Bila hanya RDFS, profil RDFS sudah cukup. Kedua, jangan menganggap "tidak ada error" sebagai bukti bahwa semua aksioma diproses, karena reasoner bisa diam. Ketiga, uji dengan contoh kecil seperti pada Langkah 2: buat tebakan dulu, lalu bandingkan dengan hasil mesin. Bila selisihnya muncul, berarti profil belum sesuai.
+
+<br>
+
+3. Kapan Anda memilih menulis jalur seperti wdt:P279* di query, dan kapan memilih menjalankan reasoner lalu menyimpan closure?
+   - Jawaban: Saya memilih jalur `wdt:P279*` bila data sumber besar, sering berubah, atau tidak boleh disalin, misalnya pada WDQS yang tidak menyimpan closure dan menghitung relasi saat query. Saya memilih menjalankan reasoner lalu menyimpan closure bila data lokal relatif stabil, banyak query membutuhkan hasil turunan, dan kita perlu query yang sederhana serta cepat. Trade-off-nya: closure bisa basi bila data sumber berubah dan harus dihitung ulang, sedangkan jalur properti bisa lambat pada data besar.
+
+
 
 > **Jawaban:** Saya memilih jalur `wdt:P279*` bila data sumber besar, sering berubah, atau tidak boleh disalin, misalnya pada WDQS yang tidak menyimpan closure dan menghitung relasi saat query. Saya memilih menjalankan reasoner lalu menyimpan closure bila data lokal relatif stabil, banyak query membutuhkan hasil turunan, dan kita perlu query yang sederhana serta cepat. Trade-off-nya: closure bisa basi bila data sumber berubah dan harus dihitung ulang, sedangkan jalur properti bisa lambat pada data besar.
 
